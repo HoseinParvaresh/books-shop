@@ -53,7 +53,9 @@ function App() {
           <Route path='comments' element={''}/>
           <Route path='chats' element={''}/>
           <Route path='publisher' element={''}/>
-          <Route path='quoteCard' element={''}/>
+          <Route path='quote-card' element={''}/>
+          <Route path='discount-code' element={''}/>
+          <Route path='tickets' element={''}/>
         </Route>
         {/* <Route path='*' element={<NotFound/>}></Route> */}
       </Routes>

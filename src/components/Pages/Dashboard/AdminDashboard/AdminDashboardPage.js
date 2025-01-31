@@ -7,28 +7,24 @@ import { Outlet } from 'react-router-dom'
 
 export default function AdminDashboardPage() {
 
-  const AsideItem = [
-    {id:1,name:"پنل کاربری",link:"main-panel",icon:'squares-2x2'},
-    {id:2,name:"کتاب های من",link:"my-books",icon:'book-open'},
-    {id:3,name:"چت های من",link:"my-chats",icon:'chat-bubble-left-right'},
-    {id:4,name:"کیف پول و تراکنش ها",link:"my-orders",icon:'wallet'},
-    {id:5,name:"تیکت ها",link:"my-tickets",icon:'chat-bubble-bottom-center-text'},
-    {id:6,name:"ویرایش حساب",link:"edit-account",icon:'pencil-square'},
-]
   const [books,setBooks] = useState([])
   const [users,setUsers] = useState([])
   const [userBook,setUserBook] = useState([])
   const [menus,setMenus] = useState([])
   const [chats,setChats] = useState([])
+  const [asideMenuItem,setAsideMenuItem] = useState()
+
 
   const fetchData = async () => {
     try {
+      const responseOtherAsideItems = await apiRequests.get(`/asideMenuItems`); 
       const responseBooks = await apiRequests.get('/books');     
       const responseUser = await apiRequests.get('/users');     
       const responseUserBook = await apiRequests.get('/userBooks');     
       const responseMenus = await apiRequests.get('/menus');   
-      const responseChats = await apiRequests.get('/chats');   
+      const responseChats = await apiRequests.get('/chats');  
 
+      setAsideMenuItem(responseOtherAsideItems.data)
       setBooks(responseBooks.data);
       setUsers(responseUser.data);
       setUserBook(responseUserBook.data);
@@ -46,9 +42,10 @@ export default function AdminDashboardPage() {
   }, []);
 
   return (
+    asideMenuItem &&
     <div className="text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900 font-Dana">
         <section className="flex md:pr-67">
-            <Aside items={AsideItem}/>
+            <Aside items={asideMenuItem.adminDashboard}/>
             <section className="w-full">
               <DashboardHeader/>
               {

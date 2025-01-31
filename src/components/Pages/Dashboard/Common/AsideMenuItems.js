@@ -10,7 +10,7 @@ export default function AsideMenuItems(Props) {
                     <svg className="size-5 md:size-7">
                         <use href={`#${item.icon}`}></use>
                     </svg>
-                    {item.name}                       
+                    {item.title}                       
                 </span>
                 <svg className="size-5 md:size-6">
                     <use href="#chevron-left-mini"></use>
