@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import AccountOverviewSection from '../../Common/AccountOverviewSection'
+import AccountOverviewSection from './../../../Common/AccountOverviewSection'
 import { provinces } from '../../../../../Utils/helperFunction'
 import { useOutletContext } from 'react-router-dom'
 import { validatorUserBook,uploadImage } from '../../../../../../Services/Axios/Requests/UserBook'

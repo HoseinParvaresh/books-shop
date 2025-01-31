@@ -1,8 +1,8 @@
 import React from 'react'
-import Theme from '../../../../Common/Header/Buttons/Theme'
-import ShoppingCart from '../../../../Common/Header/Buttons/ShoppingCart'
-import MobileLogo from '../../../../Common/Header/Logo/MobileLogo'
-import BarsIcon from '../../../../Common/Header/Buttons/BarsIcon'
+import Theme from '../../../Common/Header/Buttons/Theme'
+import ShoppingCart from '../../../Common/Header/Buttons/ShoppingCart'
+import MobileLogo from '../../../Common/Header/Logo/MobileLogo'
+import BarsIcon from '../../../Common/Header/Buttons/BarsIcon'
 
 export default function DashboardHeader() {
 

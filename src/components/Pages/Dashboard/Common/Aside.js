@@ -1,11 +1,11 @@
 import React from 'react'
-import Theme from '../../../../Common/Header/Buttons/Theme'
+import Theme from '../../../Common/Header/Buttons/Theme';
 import AsideMenuItems from './AsideMenuItems'
 import DateObject from "react-date-object";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
-import MobileLogo from '../../../../Common/Header/Logo/MobileLogo';
-import { userSignOut } from '../../../../Utils/helperFunction';
+import MobileLogo from '../../../Common/Header/Logo/MobileLogo';
+import { userSignOut } from '../../../Utils/helperFunction';
 
 export default function Aside() {
 

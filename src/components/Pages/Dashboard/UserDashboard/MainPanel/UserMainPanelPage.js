@@ -1,6 +1,6 @@
 import React from 'react'
 import AccountStatus from './AccountStatus'
-import AccountOverviewSection from './../Common/AccountOverviewSection'
+import AccountOverviewSection from './../../Common/AccountOverviewSection'
 import { useOutletContext } from 'react-router-dom';
 import { FormatNumber } from '../../../../Utils/helperFunction';
 

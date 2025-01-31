@@ -1,8 +1,8 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom';
-import AccountOverviewSection from '../Common/AccountOverviewSection';
+import AccountOverviewSection from './../../Common/AccountOverviewSection';
 import MyBooksProduct from './MyBooksProduct';
-import StatusOverview from '../Common/StatusOverview';
+import StatusOverview from './../../Common/StatusOverview';
 
 
 export default function MyBooksPage() {

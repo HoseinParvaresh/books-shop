@@ -1,6 +1,6 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom';
-import AccountOverviewSection from '../Common/AccountOverviewSection';
+import AccountOverviewSection from './../../Common/AccountOverviewSection';
 import EditAccountInput from './EditAccountInput';
 
 export default function EditAccountPage() {

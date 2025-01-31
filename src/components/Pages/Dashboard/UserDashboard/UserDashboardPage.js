@@ -1,13 +1,11 @@
 import React,{useState,useEffect} from 'react'
-import Aside from './Common/Aside'
-import DashboardHeader from './Common/DashboardHeader'
+import Aside from './../Common/Aside'
+import DashboardHeader from './../Common/DashboardHeader'
 import { Outlet } from 'react-router-dom'
 import apiRequests from './../../../../Services/Axios/Configs/Configs'
 import Alert from './../../../Utils/Alert'
 
 export default function UserDashboardPage() {
-
-  document.body.classList = 'bg-gray-100 dark:bg-gray-900' 
 
   const userId = localStorage.getItem('id');
 
@@ -33,6 +31,8 @@ export default function UserDashboardPage() {
   };
   useEffect(() => {
     fetchData();
+    document.body.classList = 'bg-gray-100 dark:bg-gray-900' 
+
   }, []);
   
   return (
