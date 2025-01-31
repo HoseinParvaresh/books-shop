@@ -1,13 +1,434 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Dana";
+        src: url("../public/fonts/DanaFaNum-Regular.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana Bold";
+        src: url("../public/fonts/DanaFaNum-Bold.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba";
+        src: url("../public/fonts/Morabba-Regular.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba Bold";
+        src: url("../public/fonts/Morabba-Bold.woff") format("woff");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba Heavy";
+        src: url("../public/fonts/Morabba-Heavy.woff") format("woff");
+        font-display: swap;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+
+    /* buttons */
+    [class*=button-] {
+        width: -moz-max-content;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        @apply flex-center w-max cursor-pointer rounded-full font-Dana transition-all
+    }
+    .button-primary {
+        @apply bg-primary text-primary-light 
+    }
+    .button-primary:hover {
+        @apply bg-green-600
+    }
+    .button-primary.button-outline {
+        background-color: initial;
+        @apply border border-primary text-primary
+    }
+    .button-primary.button-outline:hover {
+        @apply bg-primary text-primary-light
+    }
+    .button-secondary {
+        @apply bg-sky-500 text-primary-light 
+    }
+    .button-secondary:hover {
+        @apply bg-sky-600
+    }
+    .button-2xl {
+        -moz-column-gap: .625rem;
+        column-gap: .625rem;
+        @apply h-[54px] px-4 text-base leading-7 rounded-full
+    }    
+    .button-lg, .button-xl {
+        -moz-column-gap: .625rem;
+        column-gap: .625rem;
+        @apply px-4 text-base leading-7
+    }
+    .button-lg {
+        @apply h-12
+    }
+    .button-xl {
+        @apply h-13
+    }
+    .button-sm, .button-xs, .button-base {
+        -moz-column-gap: .625rem;
+        column-gap: .625rem;
+        @apply text-sm leading-6
+    }
+    .button-xs {
+        @apply h-8.5 px-2.5
+    }
+    .button-sm {
+        @apply h-10 px-3
+    }
+    .button-base {
+        @apply h-11 px-3.5
+    }
+    .button-disabled,.button-disabled:hover {
+        @apply !bg-gray-300 !cursor-not-allowed !text-white !border-none
+    }
+
+
+    /* helper */
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+    .hide {
+        @apply invisible opacity-0
+    }
+    .show {
+        @apply !visible !opacity-100
+    }
+    .overlay {
+        @apply w-full h-screen z-10 fixed inset-0 backdrop-blur-sm transition-all
+    }
+    .mobile-overlay {
+        @apply z-10 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0
+    }
+    /* title => in home page */
+    .title {
+        @apply flex items-center justify-between text-[17px] text-center relative my-4 mx-0 font-MorabbaBold
+         dark:text-white md:text-[22px]
+    }
+    .title b {
+        background-color: black;
+        display: block;
+        flex: 1;
+        height: 1px;
+        opacity: 0.2;
+        @apply dark:bg-white 
+    }
+    .title p {
+        margin: 0 1rem;
+    }
+    .menu-active {
+        right: 0 !important;
+    }
+    .dashboard-link {
+        @apply flex items-center justify-between px-2.5 h-12 rounded-lg text-black hover:text-white hover:bg-green-500 transition-colors
+    }
+    /* breadcrumb => shop page */
+    .breadcrumb {
+        @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-neutral-100 
+        rounded-xl bg-primary-light dark:bg-primary-dark dark:border-primary-dark dark:text-primary-light 
+        xs:flex
+    }
+    .breadcrumb__item {
+        @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px]
+    }
+    .breadcrumb__item::before,.breadcrumb__item::after {
+        @apply absolute left-0 h-10 w-[5px] bg-gray-100 content-[""] dark:bg-secondary-dark;
+    }
+    .breadcrumb__item::before {
+        @apply bottom-[-6px] rotate-[-35deg] origin-bottom
+    }
+    .breadcrumb__item::after {
+        @apply top-[-6px] rotate-[35deg] origin-top
+    }  
+    .breadcrumb__item:first-child {
+        @apply pr-4 pl-2
+    }
+
+
+    /* register page  */
+    .form-input.has-icon {
+        padding-left: 2.375rem;
+        padding-right: .875rem;
+    }
+    .form-input {
+        @apply h-13 w-full rounded-[10px] bg-gray-100 dark:bg-primary-darker px-3.5 
+        text-sm leading-6 text-slate-500 dark:text-primary-light transition-all outline-none
+    }
+    .form-input+svg {
+        @apply absolute inset-y-0 my-auto size-5 text-slate-500 transition-all
+    }
+    .otp__form input {
+        @apply size-13 p-0 text-center font-DanaBold text-xl leading-[2.125rem]
+    }
+
+    /* shop page */
+    .toggle {
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    .toggle__marker {
+        position: relative;
+        display: block;
+        height: 1.5rem;
+        width: 46px;
+        border-radius: 9999px;
+        --tw-bg-opacity: 1;
+        background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+        @apply dark:bg-[#333c4c];
+    }
+    .toggle__marker:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: .25rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 9999px;
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+        --tw-content: "";
+        content: var(--tw-content);
+        @apply dark:bg-[#202e38]
+    }
+    .toggle__input,.checkbox__input {
+        @apply absolute size-0 opacity-0;
+    }
+    .checkbox__input::after {
+        position: relative;
+        display: block;
+        width: 11px;
+        height: 11px;
+        border: 1px solid #808080;
+        content: "";
+        background: #FFF;
+    }
+    .checkbox__input::before {
+        position: relative;
+        display: block;
+        left: 2px;
+        top: -11px;
+        width: 7px;
+        height: 7px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #B3B3B3 #dcddde #dcddde #B3B3B3;
+        content: "";
+        background-image: linear-gradient(135deg, #B1B6BE 0%, #FFF 100%);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .toggle__input {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    .checkbox {
+        @apply relative flex cursor-pointer items-center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -moz-column-gap: .5rem;
+        column-gap: .5rem;
+    }
+    .checkbox__marker {
+        @apply block size-4 shrink-0 bg-gray-200 rounded-sm transition-colors dark:bg-[#333c4c];     
+    }
+    .checkbox__input:checked~.checkbox__marker {
+        @apply bg-blue-500
+    }
+    .sort-btn {
+        @apply inline-block border-y-2 border-transparent font-Dana text-sm leading-[64px] transition-all;
+    }
+    .sort-btn--active {
+        @apply border-blue-500 text-blue-500
+    }
+    .toggle__input:checked~.toggle__marker {
+        @apply bg-blue-500
+    }
+    .toggle__input:checked~.toggle__marker:after {
+        @apply right-[26px]
+    }
+    .filter {
+        visibility: hidden;
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 50;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        opacity: 0;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+    }
+    .filter__header {
+        display: flex;
+        height: 4rem;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .filter__clean-btn, .filter__head-title {
+        display: flex;
+        align-items: center;
+    }
+    .filter__head-title {
+        -moz-column-gap: .5rem;
+        column-gap: .5rem;
+    }
+    .filter__clean-btn {
+        -moz-column-gap: .375rem;
+        column-gap: .375rem;
+        --tw-text-opacity: 1;
+        color: rgb(219 46 52 / var(--tw-text-opacity));
+    }
+    .filter__clean-btn, .filter__head-title {
+        display: flex;
+        align-items: center;
+    }
+    .filter__footer {
+        margin-top: 1.5rem;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-bottom: 2rem;
+    }
+    
+    .filter--open {
+        visibility: visible;
+        opacity: 1;
+    }
+    .only-icon {
+        aspect-ratio: 1 / 1;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .aside-btn--active {
+        @apply text-blue-500
+    }
+
+    /* mobile menu */
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        row-gap: .25rem;
+    }
+    .mobile-menu__item {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        font-size: .875rem;
+        line-height: 1.5rem;
+    }
+    .mobile-menu__wrapper {
+        display: flex;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobile-menu__submenu {
+        margin-top: .625rem;
+        display: none;
+    }
+    .mobile-menu__submenu {
+        border-radius: .5rem;
+        --tw-bg-opacity: 1;
+        background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+        padding: .625rem .75rem;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        @apply dark:bg-gray-700
+    }
+    .mobile-menu__wrapper--open+.mobile-menu__submenu {
+        display: block;
+    }
+    .mobile-menu__submenu>:not([hidden])~:not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(.75rem*(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(.75rem* var(--tw-space-y-reverse));
+    }
+
+    
+    /* chat */
+    .scrollbar-w-2::-webkit-scrollbar {
+        width: 0.25rem;
+        height: 0.25rem;
+    }
+    .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+    --bg-opacity: 1;
+    background-color: #f7fafc;
+    background-color: rgba(247, 250, 252, var(--bg-opacity));
+    }
+    
+    .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    background-color: #edf2f7;
+    background-color: rgba(237, 242, 247, var(--bg-opacity));
+    }
+    
+    .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+    }
+    .scroll-style {
+        @apply border-l-8 border-y-8 border-white dark:border-primary-darker
+    }
+
+
+
+    ::-webkit-scrollbar {
+        width: 9px;
+    }
+    aside::-webkit-scrollbar,.navigation::-webkit-scrollbar,#search-drop_down::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #e8e8e8;
+        border-radius: 3px;
+        @apply dark:bg-[#232E33];
+    }
+    #search-drop_down::-webkit-scrollbar-track {
+        background: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #bdbdbd;
+        border-radius: 3px;
+        @apply dark:bg-[#394e5f];
+    }
 }
