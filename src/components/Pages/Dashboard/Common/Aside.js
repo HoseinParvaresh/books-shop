@@ -7,7 +7,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import MobileLogo from '../../../Common/Header/Logo/MobileLogo';
 import { userSignOut } from '../../../Utils/helperFunction';
 
-export default function Aside() {
+export default function Aside(Props) {
 
     const date = new DateObject({
         data: new Date(),
@@ -54,14 +54,7 @@ export default function Aside() {
         </div>
         {/* side items(menu) => mobile and desktop */}
         <div className="divide-y divide-neutral-200/50 dark:divide-white/10 child:relative first:!pt-0 last:!pb-0 mb-10">
-            <AsideMenuItems items={[
-                {id:1,name:"پنل کاربری",link:"main-panel",icon:'squares-2x2'},
-                {id:2,name:"کتاب های من",link:"my-books",icon:'book-open'},
-                {id:3,name:"چت های من",link:"my-chats",icon:'chat-bubble-left-right'},
-                {id:4,name:"کیف پول و تراکنش ها",link:"my-orders",icon:'wallet'},
-                {id:5,name:"تیکت ها",link:"my-tickets",icon:'chat-bubble-bottom-center-text'},
-                {id:6,name:"ویرایش حساب",link:"edit-account",icon:'pencil-square'},
-            ]}/>
+            <AsideMenuItems items={Props.items}/>
         </div>
         {/* signout Button */}
         <div onClick={userSignOut} className="w-full shrink-0 mt-auto button-base sm:button-xl justify-between bg-gray-100 text-gray-900 dark:bg-primary-darker dark:text-gray-400">
