@@ -407,7 +407,10 @@
     border-radius: 0.25rem;
     }
     .scroll-style {
-        @apply border-l-8 border-y-8 border-white dark:border-primary-darker
+        @apply border-l-8 border-y-8 border-transparent overflow-scroll overflow-x-hidden
+    }
+    .scroll-style::-webkit-scrollbar {
+        width: 5px;
     }
 
 

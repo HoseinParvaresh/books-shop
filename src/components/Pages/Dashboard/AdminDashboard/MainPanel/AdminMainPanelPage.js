@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import AccountStatus from '../../Common/AccountStatus'
-import AccountOverviewSection from './../../Common/AccountOverviewSection'
 import { useOutletContext } from 'react-router-dom';
-import { FormatNumber } from '../../../../Utils/helperFunction';
+import { Link } from 'react-router-dom';
+import NewestUserItem from './NewestUserItem';
 
 export default function AdminMainPanelPage() {
 
@@ -17,17 +17,38 @@ export default function AdminMainPanelPage() {
         {/* account status section (dashboard overview) */}
         <div className="flex items-center justify-between gap-y-6 flex-wrap font-DanaBold bg-primary-light dark:bg-primary-dark py-5 px-5 sm:px-8 rounded">
             <AccountStatus items={[
-                {id:1,title:"کتاب های من",text:`${user.myBook.length} کتاب`,icon:"book-buy"},
-                {id:2,title:"مجموع تیکت های من",text:"0 تیکت",icon:"all-ticket"},
-                {id:3,title:"کتاب های نشان شده من",text:`${user.myBookmark.length} کتاب`,icon:"bookmark"},
-                {id:4,title:"موجودی کیف پول",text:`${FormatNumber(user.credit)} تومان`,icon:"credit"},
+                {id:1,title:"کتاب ها",text:`${books.length} کتاب`,icon:"book-buy"},
+                {id:2,title:"کاربران",text:`${users.length} کاربر`,icon:"all-ticket"},
+                {id:3,title:"کتاب های کاربران",text:`${userBook.length} کتاب`,icon:"bookmark"},
+                {id:4,title:"تیکت ها",text:`${0} تیکت`,icon:"credit"},
             ]}/>
         </div>
-        <AccountOverviewSection items={[
-            {id:1,title:'کتاب های خریداری شده',link:'/myBookBuy',text:'تا الان کتابی خریداری نکردید!',buttonText:"مشاهده همه"},
-            {id:2,title:'نظرات من',link:'/myComments',text:'تا الان نظری ثبت نکرده اید!',buttonText:"مشاهده همه"},
-            {id:3,title:'کتاب های نشان شده',link:'/myBookmarks',text:'تا الان کتابی را نشان نکرده اید!',buttonText:"مشاهده همه"},
-        ]}/>
+        <div className='flex mt-7'>
+            {/* The newest users section */}
+            <div className='p-4 bg-primary-light dark:bg-primary-dark w-96 rounded'>
+                {/* head => title / button */}
+                <div className='flex justify-between items-center mb-3 pb-3 border-b border-black/10 dark:border-white/10'>
+                    {/* title */}
+                    <p className='font-DanaBold'>جدیدترین کاربران</p>
+                    {/* button */}
+                    <Link to={'/admin-dashboard/users'} className='button-primary button-xs'>
+                        مشاهده همه
+                        <svg className="size-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </Link>
+                </div>
+                {/* newest users */}
+                <div className='flex flex-col gap-y-3 px-2 py-1'>
+                    {
+                        users.slice(-5).reverse().map((user)=>(
+                            <NewestUserItem {...user}/>
+                        ))
+                    }
+                </div>
+                
+            </div>
+        </div>
     </main>
   )
 }

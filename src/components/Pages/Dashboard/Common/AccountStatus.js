@@ -3,7 +3,7 @@ import React from 'react'
 export default function AccountStatus(Props) {
   return (
     Props.items.map(item => (
-        <div key={item.id} className="flex items-center gap-x-4 w-64 col-span-3">
+        <div key={item.id} className="flex items-center gap-x-4 w-64">
             <svg className="size-10 sm:size-12">
                 <use href={`#${item.icon}`}></use>
             </svg>

@@ -20,6 +20,7 @@ import MyTicketPage from './components/Pages/Dashboard/UserDashboard/MyTicketsPa
 import AddBook from './components/Pages/Dashboard/UserDashboard/MyBooksPage/AddBookPage/AddBook';
 import AdminDashboardPage from './components/Pages/Dashboard/AdminDashboard/AdminDashboardPage';
 import { isAdmin,isLogin } from './components/Utils/helperFunction';
+import AdminMainPanelPage from './components/Pages/Dashboard/AdminDashboard/MainPanel/AdminMainPanelPage';
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
           <Route path='add-book' element={<AddBook/>}/>
         </Route>
         <Route path='/admin-dashboard' element={isAdmin ? <AdminDashboardPage/> : <Navigate to={'/'}/>}>
-          <Route path='main-panel' element={''}/>
+          <Route path='main-panel' element={<AdminMainPanelPage/>}/>
           <Route path='books' element={''}/>
           <Route path='users' element={''}/>
           <Route path='user-books' element={''}/>

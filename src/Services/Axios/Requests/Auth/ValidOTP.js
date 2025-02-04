@@ -21,10 +21,8 @@ function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 			credit: 0,
 			role:'user',
 			createdAt: new Date(),
-			myBook:[],
 			myBookmark:[],
 			notification : [],
-			tickets: []
 		}
 		addUser(newUser)
 		setTimeout(()=>{
