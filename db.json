@@ -2022,30 +2022,138 @@
           "timestamp": "2025-01-27T23:08:13.375Z"
         }
       ]
+    },
+    {
+      "id": "admin-53fc",
+      "participants": [
+        {
+          "id": "admin",
+          "name": "admin"
+        },
+        {
+          "id": "bf1e",
+          "name": "Fatemehgolo"
+        }
+      ],
+      "book": {
+        "title": "آقای کوچولوی رویایی",
+        "image": "https://res.cloudinary.com/dt0lzjiwt/image/upload/v1737946781/tx8ofwbskaa8bminswom.jpg"
+      },
+      "messages": []
     }
   ],
   "asideMenuItems": {
     "userDashboard": [
-      {"id":1,"title":"پنل کاربری","link":"main-panel","icon":"squares-2x2"},
-      {"id":2,"title":"کتاب های من","link":"my-books","icon":"book-open"},
-      {"id":3,"title":"چت های من","link":"my-chats","icon":"chat-bubble-left-right"},
-      {"id":4,"title":"کیف پول و تراکنش ها","link":"my-orders","icon":"wallet"},
-      {"id":5,"title":"تیکت ها","link":"my-tickets","icon":"chat-bubble-bottom-center-text"},
-      {"id":6,"title":"ویرایش حساب","link":"edit-account","icon":"pencil-square"}
+      {
+        "id": 1,
+        "title": "پنل کاربری",
+        "link": "main-panel",
+        "icon": "squares-2x2"
+      },
+      {
+        "id": 2,
+        "title": "کتاب های من",
+        "link": "my-books",
+        "icon": "book-open"
+      },
+      {
+        "id": 3,
+        "title": "چت های من",
+        "link": "my-chats",
+        "icon": "chat-bubble-left-right"
+      },
+      {
+        "id": 4,
+        "title": "کیف پول و تراکنش ها",
+        "link": "my-orders",
+        "icon": "wallet"
+      },
+      {
+        "id": 5,
+        "title": "تیکت ها",
+        "link": "my-tickets",
+        "icon": "chat-bubble-bottom-center-text"
+      },
+      {
+        "id": 6,
+        "title": "ویرایش حساب",
+        "link": "edit-account",
+        "icon": "pencil-square"
+      }
     ],
     "adminDashboard": [
-      {"id":1,"title":"پنل کاربری","link":"main-panel","icon":"squares-2x2"},
-      {"id":2,"title":"کتاب ها","link":"books","icon":"book-open"},
-      {"id":3,"title":"کاربران","link":"users","icon":"user-group"},
-      {"id":4,"title":"کتاب های کاربران","link":"user-books","icon":"folder-open"},
-      {"id":5,"title":"تراکنش ها","link":"user-books","icon":"wallet"},
-      {"id":6,"title":"منو ها","link":"menus","icon":"bars-3"},
-      {"id":7,"title":"کامنت ها","link":"comments","icon":"chat-bubble-oval-left"},
-      {"id":8,"title":"چت ها","link":"chats","icon":"chat-bubble-left-right"},
-      {"id":9,"title":"ناشر ها","link":"publisher","icon":"newspaper"},
-      {"id":10,"title":"کارت های نقل قول","link":"quoteCard","icon":"pencil-square"},
-      {"id":11,"title":"تیکت ها","link":"quote-card","icon":"chat-bubble-bottom-center-text"},
-      {"id":12,"title":"کد های تخفیف","link":"discount-code","icon":"percent-badge"}
-    ] 
+      {
+        "id": 1,
+        "title": "پنل کاربری",
+        "link": "main-panel",
+        "icon": "squares-2x2"
+      },
+      {
+        "id": 2,
+        "title": "کتاب ها",
+        "link": "books",
+        "icon": "book-open"
+      },
+      {
+        "id": 3,
+        "title": "کاربران",
+        "link": "users",
+        "icon": "user-group"
+      },
+      {
+        "id": 4,
+        "title": "کتاب های کاربران",
+        "link": "user-books",
+        "icon": "folder-open"
+      },
+      {
+        "id": 5,
+        "title": "تراکنش ها",
+        "link": "user-books",
+        "icon": "wallet"
+      },
+      {
+        "id": 6,
+        "title": "منو ها",
+        "link": "menus",
+        "icon": "bars-3"
+      },
+      {
+        "id": 7,
+        "title": "کامنت ها",
+        "link": "comments",
+        "icon": "chat-bubble-oval-left"
+      },
+      {
+        "id": 8,
+        "title": "چت ها",
+        "link": "chats",
+        "icon": "chat-bubble-left-right"
+      },
+      {
+        "id": 9,
+        "title": "ناشر ها",
+        "link": "publisher",
+        "icon": "newspaper"
+      },
+      {
+        "id": 10,
+        "title": "کارت های نقل قول",
+        "link": "quoteCard",
+        "icon": "pencil-square"
+      },
+      {
+        "id": 11,
+        "title": "تیکت ها",
+        "link": "quote-card",
+        "icon": "chat-bubble-bottom-center-text"
+      },
+      {
+        "id": 12,
+        "title": "کد های تخفیف",
+        "link": "discount-code",
+        "icon": "percent-badge"
+      }
+    ]
   }
 }

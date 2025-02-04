@@ -1,12 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import AccountOverviewSection from './../../Common/AccountOverviewSection';
 import { Link } from 'react-router-dom';
 export default function MyChatsPage() {
 
-  document.getElementById('aside-btn-3').classList.add('aside-btn--active')
   const [user,userBooks,chats] = useOutletContext()
-  console.log(chats);
+
+  useEffect(() => {
+    document.getElementById('aside-btn-3').classList.add('aside-btn--active')        
+  }, []);
 
   return (
     <main className="max-w-[1332px] w-full px-4 md:px-8 pb-5 md:pb-8 mx-auto">

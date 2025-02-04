@@ -1,11 +1,14 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import AccountOverviewSection from './../../Common/AccountOverviewSection';
 import EditAccountInput from './EditAccountInput';
 
 export default function EditAccountPage() {
 
-  document.getElementById('aside-btn-6').classList.add('aside-btn--active')
+  useEffect(() => {
+    document.getElementById('aside-btn-6').classList.add('aside-btn--active')        
+  }, []);
+
   const [user] = useOutletContext()
   
 

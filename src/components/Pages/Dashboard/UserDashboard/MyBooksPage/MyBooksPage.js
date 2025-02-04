@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useOutletContext } from 'react-router-dom';
 import AccountOverviewSection from './../../Common/AccountOverviewSection';
 import MyBooksProduct from './MyBooksProduct';
@@ -7,7 +7,10 @@ import StatusOverview from './../../Common/StatusOverview';
 
 export default function MyBooksPage() {
 
-  document.getElementById('aside-btn-2').classList.add('aside-btn--active')
+  useEffect(() => {
+    document.getElementById('aside-btn-2').classList.add('aside-btn--active')        
+  }, []);
+
   const [user,userBooks] = useOutletContext()
   
 
