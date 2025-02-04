@@ -4,18 +4,35 @@ import apiRequests from './../Configs/Configs'
 
 const validatorUserBook = (userBook) => {
     
-    if(validator.isEmpty(userBook.title.trim())) { Alert('error',"عنوان کتاب درست وارد نشده یا خالی است"); return false
-    } else if(validator.isEmpty(userBook.category)) { Alert('error',"دسته بندی انتخاب نشده"); return false   
-    } else if (validator.isEmpty(userBook.province)) { Alert('error',"محل آگهی انتخاب نشده"); return false 
-    } else if (validator.isEmpty(userBook.status)) { Alert('error',"وضعیت کتاب انتخاب نشده"); return false 
-    } else if (!userBook.chat && !userBook.number) { Alert('error',"حداقل باید یک روش ارتباط رو فعال کنی"); return false
-    } else if (validator.isEmpty(userBook.description.trim())) { Alert('error',"توضیحات درست وارد نشده یا خالی است"); return false
-    } else if (userBook.image1.name == undefined && userBook.image2.name == undefined && 
-                userBook.image3.name == undefined && userBook.image4.name == undefined && 
-                userBook.image5.name == undefined) { Alert('error',"حداقل باید یک تصویر آپلود کنی"); return false
-    } else { 
-        return true
-    }   
+    if(validator.isEmpty(userBook.title.trim())) { 
+        Alert('error',"عنوان کتاب درست وارد نشده یا خالی است") 
+        return false
+    } 
+    if(validator.isEmpty(userBook.category)) { 
+        Alert('error',"دسته بندی انتخاب نشده") 
+        return false   
+    } 
+    if (validator.isEmpty(userBook.province)) { 
+        Alert('error',"محل آگهی انتخاب نشده")
+        return false 
+    }
+    if (validator.isEmpty(userBook.status)) { 
+        Alert('error',"وضعیت کتاب انتخاب نشده")
+         return false 
+    } 
+    if (!userBook.chat && !userBook.number) { 
+        Alert('error',"حداقل باید یک روش ارتباط رو فعال کنی") 
+        return false
+    } 
+    if (validator.isEmpty(userBook.description.trim())) { 
+        Alert('error',"توضیحات درست وارد نشده یا خالی است")
+        return false
+    }
+    if ([userBook.image1, userBook.image2, userBook.image3, userBook.image4, userBook.image5].every(img => img.name === undefined)) {
+        Alert('error',"حداقل باید یک تصویر آپلود کنی"); 
+        return false
+    } 
+    return true  
 }
 const addUserBook = (data) => {
     apiRequests.post('/userBooks',data).then(res => {

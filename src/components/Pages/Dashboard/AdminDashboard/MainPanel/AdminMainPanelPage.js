@@ -4,9 +4,9 @@ import AccountOverviewSection from './../../Common/AccountOverviewSection'
 import { useOutletContext } from 'react-router-dom';
 import { FormatNumber } from '../../../../Utils/helperFunction';
 
-export default function UserMainPanelPage() {
+export default function AdminMainPanelPage() {
 
-    const [user] = useOutletContext()
+    const [books,users,userBook,menus,chats] = useOutletContext()
     
     useEffect(() => {
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        

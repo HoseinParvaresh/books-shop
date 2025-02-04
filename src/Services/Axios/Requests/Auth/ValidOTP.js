@@ -5,7 +5,7 @@ import { addUser } from "./Signup"
 function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 	userName,phoneNumber,email,password) {
 
-    let otpInputs = otpInput1+otpInput2+otpInput3+otpInput4+otpInput5
+    const otpInputs = otpInput1+otpInput2+otpInput3+otpInput4+otpInput5
 
 	if(otpInputs != otp) {
 		Alert('error','کد وارد شده صحیح نیست')
