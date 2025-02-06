@@ -130,8 +130,35 @@
         right: 0 !important;
     }
     .dashboard-link {
-        @apply flex items-center justify-between px-2.5 h-12 rounded-lg text-black hover:text-white hover:bg-green-500 transition-colors
+        @apply flex items-center justify-between px-2.5 h-12 rounded-lg text-black dark:text-white hover:text-white hover:bg-green-500 transition-colors
     }
+    .dir-ltr {
+        direction: ltr;
+    }
+    .dir-rtl {
+        direction: rtl;
+    }
+
+    /* table */
+    .table {
+        @apply w-full text-left text-sm text-gray-500 dark:text-gray-400 rounded-md overflow-hidden text-center
+    }
+    .table__title {
+        @apply flex justify-between items-center py-2 px-3 shadow-md bg-white dark:bg-primary-darker mb-2 rounded-md
+    }
+    .table__head {
+        @apply  text-xs uppercase text-gray-700 dark:text-gray-400
+    }
+    .table__body {
+        @apply divide-y
+    }
+    .table__head--row {
+        @apply bg-gray-50 px-6 py-3 dark:bg-gray-700
+    }
+    .table__body--row {
+        @apply hover:bg-gray-50 dark:hover:bg-gray-600 bg-white dark:border-gray-700 dark:bg-gray-800 child:whitespace-nowrap child:text-gray-900 child:dark:text-white/80 child:px-6 child:py-4
+    }
+    
     /* breadcrumb => shop page */
     .breadcrumb {
         @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-neutral-100 
@@ -392,19 +419,19 @@
         height: 0.25rem;
     }
     .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
-    --bg-opacity: 1;
-    background-color: #f7fafc;
-    background-color: rgba(247, 250, 252, var(--bg-opacity));
+        --bg-opacity: 1;
+        background-color: #f7fafc;
+        background-color: rgba(247, 250, 252, var(--bg-opacity));
     }
     
     .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
-    --bg-opacity: 1;
-    background-color: #edf2f7;
-    background-color: rgba(237, 242, 247, var(--bg-opacity));
+        --bg-opacity: 1;
+        background-color: #edf2f7;
+        background-color: rgba(237, 242, 247, var(--bg-opacity));
     }
     
     .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
-    border-radius: 0.25rem;
+        border-radius: 0.25rem;
     }
     .scroll-style {
         @apply border-l-8 border-y-8 border-transparent overflow-scroll overflow-x-hidden
@@ -412,9 +439,6 @@
     .scroll-style::-webkit-scrollbar {
         width: 5px;
     }
-
-
-
     ::-webkit-scrollbar {
         width: 9px;
     }

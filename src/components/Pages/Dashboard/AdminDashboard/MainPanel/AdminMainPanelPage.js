@@ -2,11 +2,14 @@ import React,{useEffect} from 'react'
 import AccountStatus from '../../Common/AccountStatus'
 import { useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import NewestUserItem from './NewestUserItem';
+import { calcDiscountPrice,FormatNumber,calcRelativeTimeDifference } from '../../../../Utils/helperFunction';
 
 export default function AdminMainPanelPage() {
 
     const [books,users,userBook,menus,chats] = useOutletContext()
+    
+
+
     
     useEffect(() => {
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        
@@ -23,30 +26,121 @@ export default function AdminMainPanelPage() {
                 {id:4,title:"تیکت ها",text:`${0} تیکت`,icon:"credit"},
             ]}/>
         </div>
-        <div className='flex mt-7'>
-            {/* The newest users section */}
-            <div className='p-4 bg-primary-light dark:bg-primary-dark w-96 rounded'>
-                {/* head => title / button */}
-                <div className='flex justify-between items-center mb-3 pb-3 border-b border-black/10 dark:border-white/10'>
-                    {/* title */}
-                    <p className='font-DanaBold'>جدیدترین کاربران</p>
-                    {/* button */}
-                    <Link to={'/admin-dashboard/users'} className='button-primary button-xs'>
-                        مشاهده همه
-                        <svg className="size-4">
-                            <use href="#chevron-left"></use>
-                        </svg>
-                    </Link>
+        <div className='grid grid-cols-12 mt-7 gap-7'>
+            {/* The newest users table => title / table */}
+            <div className="overflow-hidden col-span-12 lg:col-span-5">
+                {/* title */}
+                <div className='table__title'>
+                    <p className='font-DanaBold'>جدید ترین کاربران</p>
+                    <Link to={'/admin-dashboard/users'} className='button-primary button-xs'>مشاهده همه</Link>
                 </div>
-                {/* newest users */}
-                <div className='flex flex-col gap-y-3 px-2 py-1'>
-                    {
-                        users.slice(-5).reverse().map((user)=>(
-                            <NewestUserItem {...user}/>
-                        ))
-                    }
+                {/* table */}
+                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table class="table">
+                        {/* head */}
+                        <thead class="table__head">
+                            <tr>
+                                <th class="table__head--row">شماره تلفن</th>
+                                <th class="table__head--row">نام کاربری</th>
+                                <th class="table__head--row">شناسه</th>
+                            </tr>
+                        </thead>
+                        {/* body */}
+                        <tbody class="table__body">
+                            {
+                                users.slice(-5).reverse().map(user => (
+                                <tr class="table__body--row">
+                                    <td>{user.phoneNumber}</td>
+                                    <td>{user.userName}</td>
+                                    <td>{user.id}</td>
+                                </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
                 </div>
-                
+            </div>
+            {/* Latest books table => title / table  */}
+            <div className="overflow-hidden col-span-12 lg:col-span-7">
+                {/* title */}
+                <div className='table__title'>
+                    <p className='font-DanaBold'>آخرین کتاب ها</p>
+                    <Link to={'/admin-dashboard/books'} className='button-primary button-xs'>مشاهده همه</Link>
+                </div>
+                {/* table */}
+                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table class="table">
+                        {/* head */}
+                        <thead class="table__head">
+                            <tr>
+                                <th class="table__head--row">وضعیت</th>
+                                <th class="table__head--row">مقدار تخفیف</th>
+                                <th class="table__head--row">قیمت با تخفیف (تومان)</th>
+                                <th class="table__head--row">قیمت اصلی (تومان)</th>
+                                <th class="table__head--row">عنوان  کتاب</th>
+                            </tr>
+                        </thead>
+                        {/* body */}
+                        <tbody class="table__body">
+                            {
+                                books.slice(-5).reverse().map(book => (
+                                <tr class="table__body--row">
+                                    <td className='flex justify-center'>{book.available ? <svg className="size-5 text-green-500"><use href="#check-circle"></use></svg> : <svg className="size-5 text-red-500"><use href="#x-circle-fill"></use></svg>}</td>
+                                    <td>{book.discount ? `${book.discount}%` : 0}</td>
+                                    <td>{book.discount ? FormatNumber(calcDiscountPrice(book.price,book.discount)) :  FormatNumber(book.price)}</td>
+                                    <td>{FormatNumber(book.price)}</td>
+                                    <td><Link to={`/book/${book.id}`}>{book.title}</Link></td>
+                                </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {/* Latest user books table => title / table */}
+            <div className="overflow-hidden col-span-12 lg:col-span-12">
+                {/* title */}
+                <div className='table__title'>
+                    <p className='font-DanaBold'>آخرین کتاب های کاربران</p>
+                    <Link to={'/admin-dashboard/books'} className='button-primary button-xs'>مشاهده همه</Link>
+                </div>
+                {/* table */}
+                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table class="table">
+                        {/* head */}
+                        <thead class="table__head">
+                            <tr>
+                                <th class="table__head--row">وضعیت</th>
+                                <th class="table__head--row">ساخته شده توسط (شناسه)</th>
+                                <th class="table__head--row">ساخته در</th>
+                                <th class="table__head--row">عنوان  کتاب</th>
+                            </tr>
+                        </thead>
+                        {/* body */}
+                        <tbody class="table__body">
+                            {
+                                userBook.slice(-5).reverse().map(book => (
+                                <tr class="table__body--row">
+                                    <td className="flex justify-center">{book.review_status == 'pending'  ? <svg className="size-5 text-yellow-500">
+                                                                                                                <use href="#question-mark-circle-fill"></use>
+                                                                                                            </svg> :
+                                                                         book.review_status == 'approved' ? <svg className="size-5 text-green-500">
+                                                                                                                <use href="#check-circle"></use>
+                                                                                                            </svg> 
+                                                                                                          : 
+                                                                                                            <svg className="size-5 text-red-500">
+                                                                                                                <use href="#x-circle-fill"></use>
+                                                                                                            </svg>}
+                                    </td>
+                                    <td>{book.createdBy.id}</td>
+                                    <td className='dir-rtl'>{`${calcRelativeTimeDifference(book.createdAt)} در ${book.province}`}</td>
+                                    <td><Link to={`/user-book/${book.id}`}>{book.title}</Link></td>
+                                </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

@@ -63,9 +63,6 @@ module.exports = {
         '67':'268px'
       }
     },
-
-    
-
     fontFamily: {
       "Dana": "Dana",
       "DanaBold": "Dana Bold",

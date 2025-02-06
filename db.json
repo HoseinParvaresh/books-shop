@@ -1126,7 +1126,7 @@
       "publisher": "اختران",
       "translator": "رضا رضایی",
       "buyer": 114,
-      "available": true,
+      "available": false,
       "rate": 3,
       "status": "نو",
       "image1": "https://dkstatics-public.digikala.com/digikala-products/112289792.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90",
@@ -1718,7 +1718,7 @@
       "province": "بوشهر ",
       "chat": true,
       "number": true,
-      "review_status": "pending",
+      "review_status": "rejected",
       "createdAt": "2025-01-27T02:40:35.419Z",
       "createdBy": {
         "id": "d973",
@@ -1740,7 +1740,7 @@
       "province": "بوشهر ",
       "chat": true,
       "number": false,
-      "review_status": "pending",
+      "review_status": "approved",
       "createdAt": "2025-01-27T02:40:59.026Z",
       "createdBy": {
         "id": "bf1e",
@@ -1850,7 +1850,7 @@
       "province": "ایلام ",
       "chat": true,
       "number": false,
-      "review_status": "pending",
+      "review_status": "rejected",
       "createdAt": "2025-01-27T03:19:08.784Z",
       "createdBy": {
         "id": "bf1e",
@@ -1894,7 +1894,7 @@
       "province": "البرز ",
       "chat": true,
       "number": true,
-      "review_status": "pending",
+      "review_status": "approved",
       "createdAt": "2025-02-04T20:57:14.446Z",
       "createdBy": {
         "id": "1490",
