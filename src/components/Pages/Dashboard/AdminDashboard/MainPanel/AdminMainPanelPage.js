@@ -32,7 +32,12 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>جدید ترین کاربران</p>
-                    <Link to={'/admin-dashboard/users'} className='button-primary button-xs'>مشاهده همه</Link>
+                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                        مشاهده همه
+                        <svg className="size-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </Link>
                 </div>
                 {/* table */}
                 <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
@@ -65,7 +70,12 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>آخرین کتاب ها</p>
-                    <Link to={'/admin-dashboard/books'} className='button-primary button-xs'>مشاهده همه</Link>
+                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                        مشاهده همه
+                        <svg className="size-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </Link>
                 </div>
                 {/* table */}
                 <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
@@ -101,8 +111,13 @@ export default function AdminMainPanelPage() {
             <div className="overflow-hidden col-span-12 lg:col-span-12">
                 {/* title */}
                 <div className='table__title'>
-                    <p className='font-DanaBold'>آخرین کتاب های کاربران</p>
-                    <Link to={'/admin-dashboard/books'} className='button-primary button-xs'>مشاهده همه</Link>
+                    <p className='font-DanaBold'>جدید ترین کتاب های کاربران</p>
+                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                        مشاهده همه
+                        <svg className="size-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </Link>
                 </div>
                 {/* table */}
                 <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">

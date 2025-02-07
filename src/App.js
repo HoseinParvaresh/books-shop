@@ -21,6 +21,7 @@ import AddBook from './components/Pages/Dashboard/UserDashboard/MyBooksPage/AddB
 import AdminDashboardPage from './components/Pages/Dashboard/AdminDashboard/AdminDashboardPage';
 import { isAdmin,isLogin } from './components/Utils/helperFunction';
 import AdminMainPanelPage from './components/Pages/Dashboard/AdminDashboard/MainPanel/AdminMainPanelPage';
+import AdminDashboardBookPage from './components/Pages/Dashboard/AdminDashboard/BooksPage/BookPage';
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
         </Route>
         <Route path='/admin-dashboard' element={isAdmin ? <AdminDashboardPage/> : <Navigate to={'/'}/>}>
           <Route path='main-panel' element={<AdminMainPanelPage/>}/>
-          <Route path='books' element={''}/>
+          <Route path='books' element={<AdminDashboardBookPage/>}/>
           <Route path='users' element={''}/>
           <Route path='user-books' element={''}/>
           <Route path='menus' element={''}/>
