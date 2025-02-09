@@ -13,9 +13,13 @@ async function addChat(userId,userName,bookId,createdId,createdName,title,image)
                 book: {title,image},
                 messages: []
             }
-            apiRequests.post('/chats',newChat).then(res => {
-                window.location.reload()
-            })
+            try {
+                apiRequests.post('/chats',newChat).then(res => {
+                    window.location.reload()      
+                })
+            } catch (error) {
+                console.log(error);             
+            }  
         }  
     })
 }

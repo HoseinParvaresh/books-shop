@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequests = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://hopeful-nobel-ow1xn8uvt.liara.run/',
     headers: {
         "Content-Type": "application/json",
         Auth: "Bearer Token",

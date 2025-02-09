@@ -57,7 +57,7 @@ export default function Aside(Props) {
             <AsideMenuItems items={Props.items}/>
         </div>
         {/* signout Button */}
-        <div onClick={userSignOut} className="w-full shrink-0 mt-auto button-base sm:button-xl justify-between bg-gray-100 text-gray-900 dark:bg-primary-darker dark:text-gray-400">
+        <div onClick={userSignOut} className="w-full shrink-0 mt-auto button-base sm:button-xl justify-between bg-gray-100 text-gray-800 dark:bg-primary-darker dark:text-gray-300">
             خروج از حساب کاربری
             <svg className="size-6">
                 <use href="#arrow-left-on-rectangle-mini"></use>

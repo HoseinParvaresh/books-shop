@@ -8,9 +8,6 @@ export default function AdminMainPanelPage() {
 
     const [books,users,userBook,menus,chats] = useOutletContext()
     
-
-
-    
     useEffect(() => {
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        
       }, []);
@@ -40,21 +37,21 @@ export default function AdminMainPanelPage() {
                     </Link>
                 </div>
                 {/* table */}
-                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
-                    <table class="table">
+                <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table className="table">
                         {/* head */}
-                        <thead class="table__head">
+                        <thead className="table__head">
                             <tr>
-                                <th class="table__head--row">شماره تلفن</th>
-                                <th class="table__head--row">نام کاربری</th>
-                                <th class="table__head--row">شناسه</th>
+                                <th className="table__head--row">شماره تلفن</th>
+                                <th className="table__head--row">نام کاربری</th>
+                                <th className="table__head--row">شناسه</th>
                             </tr>
                         </thead>
                         {/* body */}
-                        <tbody class="table__body">
+                        <tbody className="table__body">
                             {
-                                users.slice(-5).reverse().map(user => (
-                                <tr class="table__body--row">
+                                users.slice(-5).reverse().map((user,index) => (
+                                <tr className="table__body--row" key={index}>
                                     <td>{user.phoneNumber}</td>
                                     <td>{user.userName}</td>
                                     <td>{user.id}</td>
@@ -78,23 +75,23 @@ export default function AdminMainPanelPage() {
                     </Link>
                 </div>
                 {/* table */}
-                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
-                    <table class="table">
+                <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table className="table">
                         {/* head */}
-                        <thead class="table__head">
+                        <thead className="table__head">
                             <tr>
-                                <th class="table__head--row">وضعیت</th>
-                                <th class="table__head--row">مقدار تخفیف</th>
-                                <th class="table__head--row">قیمت با تخفیف (تومان)</th>
-                                <th class="table__head--row">قیمت اصلی (تومان)</th>
-                                <th class="table__head--row">عنوان  کتاب</th>
+                                <th className="table__head--row">وضعیت</th>
+                                <th className="table__head--row">مقدار تخفیف</th>
+                                <th className="table__head--row">قیمت با تخفیف (تومان)</th>
+                                <th className="table__head--row">قیمت اصلی (تومان)</th>
+                                <th className="table__head--row">عنوان  کتاب</th>
                             </tr>
                         </thead>
                         {/* body */}
-                        <tbody class="table__body">
+                        <tbody className="table__body">
                             {
-                                books.slice(-5).reverse().map(book => (
-                                <tr class="table__body--row">
+                                books.slice(-5).reverse().map((book,index) => (
+                                <tr className="table__body--row" key={index}>
                                     <td className='flex justify-center'>{book.available ? <svg className="size-5 text-green-500"><use href="#check-circle"></use></svg> : <svg className="size-5 text-red-500"><use href="#x-circle-fill"></use></svg>}</td>
                                     <td>{book.discount ? `${book.discount}%` : 0}</td>
                                     <td>{book.discount ? FormatNumber(calcDiscountPrice(book.price,book.discount)) :  FormatNumber(book.price)}</td>
@@ -120,22 +117,22 @@ export default function AdminMainPanelPage() {
                     </Link>
                 </div>
                 {/* table */}
-                <div class="relative dir-ltr overflow-x-scroll lg:overflow-auto">
-                    <table class="table">
+                <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
+                    <table className="table">
                         {/* head */}
-                        <thead class="table__head">
+                        <thead className="table__head">
                             <tr>
-                                <th class="table__head--row">وضعیت</th>
-                                <th class="table__head--row">ساخته شده توسط (شناسه)</th>
-                                <th class="table__head--row">ساخته در</th>
-                                <th class="table__head--row">عنوان  کتاب</th>
+                                <th className="table__head--row">وضعیت</th>
+                                <th className="table__head--row">ساخته شده توسط (شناسه)</th>
+                                <th className="table__head--row">ساخته در</th>
+                                <th className="table__head--row">عنوان  کتاب</th>
                             </tr>
                         </thead>
                         {/* body */}
-                        <tbody class="table__body">
+                        <tbody className="table__body">
                             {
-                                userBook.slice(-5).reverse().map(book => (
-                                <tr class="table__body--row">
+                                userBook.slice(-5).reverse().map((book,index) => (
+                                <tr className="table__body--row" key={index}>
                                     <td className="flex justify-center">{book.review_status == 'pending'  ? <svg className="size-5 text-yellow-500">
                                                                                                                 <use href="#question-mark-circle-fill"></use>
                                                                                                             </svg> :
