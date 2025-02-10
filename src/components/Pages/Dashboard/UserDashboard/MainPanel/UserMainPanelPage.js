@@ -6,7 +6,7 @@ import { FormatNumber } from '../../../../Utils/helperFunction';
 
 export default function UserMainPanelPage() {
 
-    const [user] = useOutletContext()
+    const [user,userBooks] = useOutletContext()
     
     useEffect(() => {
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        
@@ -17,7 +17,7 @@ export default function UserMainPanelPage() {
         {/* account status section (dashboard overview) */}
         <div className="flex items-center justify-between gap-y-6 flex-wrap font-DanaBold bg-primary-light dark:bg-primary-dark py-5 px-5 sm:px-8 rounded">
             <AccountStatus items={[
-                {id:1,title:"کتاب های من",text:`${user.myBook.length} کتاب`,icon:"book-buy"},
+                {id:1,title:"کتاب های من",text:`${userBooks.length} کتاب`,icon:"book-buy"},
                 {id:2,title:"مجموع تیکت های من",text:"0 تیکت",icon:"all-ticket"},
                 {id:3,title:"کتاب های نشان شده من",text:`${user.myBookmark.length} کتاب`,icon:"bookmark"},
                 {id:4,title:"موجودی کیف پول",text:`${FormatNumber(user.credit)} تومان`,icon:"credit"},

@@ -10,8 +10,7 @@ export default function UserDashboardPage() {
 
   const [user,setUser] = useState()
   const [userBooks,setUserBooks] = useState([])
-  const [selfChats,setSelfChats] = useState([])
-  const [otherChats,setOtherChats] = useState([])
+  const [chats,setChats] = useState([])
   const [asideMenuItem,setAsideMenuItem] = useState()
 
   
@@ -20,14 +19,12 @@ export default function UserDashboardPage() {
       try {
         const response = await apiRequests.get(`/users/${userId}`);     
         const responseUserBook = await apiRequests.get(`/userBooks?createdBy.id=${userId}`);
-        const responseSelfChats = await apiRequests.get(`/chats?participants[0].id=${userId}`);
-        const responseOtherChats = await apiRequests.get(`/chats?participants[1].id=${userId}`);
+        const responseChats = await apiRequests.get(`/chats?q=${userId}`);
         const responseOtherAsideItems = await apiRequests.get(`/asideMenuItems`);
   
         setUser(response.data);
         setUserBooks(responseUserBook.data)
-        setSelfChats(responseSelfChats.data)
-        setOtherChats(responseOtherChats.data)
+        setChats(responseChats.data)
         setAsideMenuItem(responseOtherAsideItems.data)
         
       } catch (error) {
@@ -47,7 +44,7 @@ export default function UserDashboardPage() {
               <DashboardHeader/>
               {
                 user && 
-                <Outlet context={[user,userBooks,[...selfChats,...otherChats]]} />
+                <Outlet context={[user,userBooks,chats]} />
               }
             </section> 
         </section>

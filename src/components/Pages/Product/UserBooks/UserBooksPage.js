@@ -12,11 +12,11 @@ export default function ProductPage() {
   const [userBooks,setUserBooks] = useState()
 
   document.documentElement.scrollTop = 0;
+  const params = useParams()
 
   
   useEffect(() => {
     const fetchData = async () => {
-      const params = useParams()
       try {
         const response = await apiRequests.get(`/userBooks/${params.id}`);     
         setUserBooks(response.data);

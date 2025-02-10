@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import apiRequests from '../../../Services/Axios/Configs/Configs';
 import Alert from '../../Utils/Alert';
 import { Mosaic } from 'react-loading-indicators';
-import { checkLogin,userId } from '../../Utils/helperFunction';
+import { checkLogin,userId,findImage } from '../../Utils/helperFunction';
 import { Link } from 'react-router-dom';
 
 export default function Main() {
@@ -14,7 +14,8 @@ export default function Main() {
     const [messageValue,setMessageValue] = useState('')
     const [loading,setLoading] = useState(false)
     const [bookData,setBookData] = useState([])
-
+    const img = findImage(bookData.image1,bookData.image2,bookData.image3,bookData.image4,bookData.image5)
+    
     const params = useParams();
   
     useEffect(() => {
@@ -22,6 +23,7 @@ export default function Main() {
             try {
               const response = await apiRequests.get(`/chats/${params.id}`);      
               const responseBook = await apiRequests.get(`/userBooks/${params.id.slice((params.id.indexOf('-')) + 1)}`)
+
               setChat(response.data);
               setBookData(responseBook.data)
             } catch (error) {
@@ -56,13 +58,13 @@ export default function Main() {
         {   
             chat &&
             <div className="flex-1 bg-secondary-light text-black dark:text-white dark:bg-secondary-dark p-3 px-4 md:px-36 sm:py-8 lg:px-56 flex flex-col h-screen font-Dana">
-                {/* top => name & profile / icon */}
+                {/* top => book name & book image / icon */}
                 <div className='flex items-center justify-between py-3'>
-                    {/* name / profile */}
+                    {/* book name / book image */}
                     <div className="relative flex items-center gap-x-2">
-                        {/* profile */}
-                        <img src={bookData.image1} alt={bookData.title} className="size-10 md:size-16 rounded-xl"/>
-                        {/* name */}
+                        {/* book image */}
+                        <img src={img} alt={bookData.title} className="size-10 md:size-16 rounded-xl"/>
+                        {/* book name */}
                         <Link to={`/user-book/${bookData.id}`} className="flex flex-col leading-tight text-base md:text-xl">
                             <span className="mr-3">{bookData.title}</span>
                         </Link>

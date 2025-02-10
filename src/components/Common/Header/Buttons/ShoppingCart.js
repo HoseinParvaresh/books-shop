@@ -38,7 +38,7 @@ export default function ShoppingCart() {
             <div className={`${Z_index} pt-5 absolute left-0 transition-all ${toggleBox}`}>
                 <div className="flex-center flex-col w-75 sm:w-[350px] p-6 shadow-normal rounded-xl bg-primary-light dark:bg-primary-dark">
                     <p className="mb-5"> هیچ محصولی در سبد خرید شما نیست. </p>
-                    <Link to={'/shop'} className="text-xs py-2 px-3 button-primary"> بازگشت به فروشگاه </Link>
+                    <Link to={'/book-store'} className="text-xs py-2 px-3 button-primary"> بازگشت به فروشگاه </Link>
                 </div>
             </div>
         </div>
