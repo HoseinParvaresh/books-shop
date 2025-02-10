@@ -20,7 +20,7 @@ export default function SignUp() {
                 {/* overlay */}
                 <div onClick={signupButtonHandler} className={`overlay ${toggle}`}></div>
                 {/* icon and drop down => user profile */}
-                <div className="relative group z-20">
+                <div className="relative group z-10">
                     {/* <!-- icon => When Click Box Showing --> */}
                     <button onClick={signupButtonHandler} type="button" className="button-lg md:button-xl only-icon bg-gray-100 text-slate-500 dark:bg-white/5 dark:text-white">
                         <svg className="size-5.5 md:size-6">
@@ -28,7 +28,7 @@ export default function SignUp() {
                         </svg>
                     </button>
                     {/* <!-- drop down --> */}
-                    <div className={`absolute -left-12 xxs:left-0 transition-all pt-5 z-20 ${toggle}`}>
+                    <div className={`absolute -left-12 xxs:left-0 transition-all pt-5 z-10 ${toggle}`}>
                         {/* drop down */}
                         <div className="w-[278px] bg-primary-light dark:bg-primary-dark border border-neutral-100 dark:border-0 p-5 pb-3.5 rounded-xl">
                             {/* <!-- User Info => profile / username / credit --> */}

@@ -108,7 +108,7 @@
         @apply w-full h-screen z-10 fixed inset-0 backdrop-blur-sm transition-all
     }
     .mobile-overlay {
-        @apply z-10 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0
+        @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0
     }
     /* title => in home page */
     .title {

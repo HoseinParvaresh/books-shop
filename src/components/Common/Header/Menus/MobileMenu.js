@@ -66,7 +66,7 @@ export default function MobileMenu(Props) {
                         </div>
                     </div>
                     {/* search drop down */}
-                    <div id='search-drop_down' className={`absolute ${toggleSearchBox} top-15 right-[22px] left-0 w-5/6 max-h-60 overflow-scroll overflow-x-hidden bg-white dark:bg-primary-darker p-5 border-l-8 border-y-8 border-white dark:border-primary-darker text-gray-900 dark:text-white rounded-xl z-20 transition-all`}>
+                    <div id='search-drop_down' className={`absolute ${toggleSearchBox} top-15 right-[22px] left-0 w-5/6 max-h-60 overflow-scroll overflow-x-hidden shadow-normal dark:shadow-none bg-white dark:bg-primary-darker p-5 border-l-8 border-y-8 border-white dark:border-primary-darker text-gray-900 dark:text-white rounded-xl z-20 transition-all`}>
                         <div className="space-y-5 text-right">
                             {searchValue.length ? 
                                 searchValue.map((book,index)=>(
