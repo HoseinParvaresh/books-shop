@@ -1,7 +1,6 @@
 import Alert from "../../../components/Utils/Alert"
 import validator from "validator"
 import apiRequests from './../Configs/Configs'
-import baseURL from './../../../components/Utils/helperFunction/baseURL'
 
 const validatorUserBook = (userBook) => {
     
@@ -39,7 +38,7 @@ const addUserBook = (data) => {
     apiRequests.post('/userBooks',data).then(res => {
             Alert('success','کتاب شما ثبت و بعد از بررسی منتشر خواهد شد.')
             setTimeout(()=>{
-                window.location.replace(`${baseURL}/user-dashboard/main-panel`);
+                window.location.replace(`https://books-shop.liara.run/user-dashboard/main-panel`);
             }, 2000)
     }); 
 }

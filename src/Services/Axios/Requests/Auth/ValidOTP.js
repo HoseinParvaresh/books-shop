@@ -1,7 +1,5 @@
 import Alert from "../../../../components/Utils/Alert"
 import { addUser } from "./Signup"
-import baseURL from './../../../../components/Utils/helperFunction/baseURL'
-
 
 function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 	userName,phoneNumber,email,password) {
@@ -27,7 +25,7 @@ function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 		}
 		addUser(newUser)
 		setTimeout(()=>{
-		window.location.replace(baseURL);
+		window.location.replace('https://books-shop.liara.run');
 	}, 1500)
 }
 
