@@ -6,7 +6,7 @@ import { calcDiscountPrice,FormatNumber,calcRelativeTimeDifference } from '../..
 
 export default function AdminMainPanelPage() {
 
-    const [books,users,userBook,menus,chats] = useOutletContext()
+    const [books,users,userBook] = useOutletContext()
     
     useEffect(() => {
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        
@@ -133,10 +133,10 @@ export default function AdminMainPanelPage() {
                             {
                                 userBook.slice(-5).reverse().map((book,index) => (
                                 <tr className="table__body--row" key={index}>
-                                    <td className="flex justify-center">{book.review_status == 'pending'  ? <svg className="size-5 text-yellow-500">
+                                    <td className="flex justify-center">{book.review_status === 'pending'  ? <svg className="size-5 text-yellow-500">
                                                                                                                 <use href="#question-mark-circle-fill"></use>
                                                                                                             </svg> :
-                                                                         book.review_status == 'approved' ? <svg className="size-5 text-green-500">
+                                                                         book.review_status === 'approved' ? <svg className="size-5 text-green-500">
                                                                                                                 <use href="#check-circle"></use>
                                                                                                             </svg> 
                                                                                                           : 

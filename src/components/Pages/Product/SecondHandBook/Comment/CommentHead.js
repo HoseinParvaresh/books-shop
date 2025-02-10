@@ -8,7 +8,7 @@ const [commentForm,setCommentForm] = useState('hidden')
   const newComment = () => {
     
     if(checkLogin()) {
-      commentForm == 'hidden' ?
+      commentForm === 'hidden' ?
       setCommentForm('') :
       setCommentForm('hidden')
     }

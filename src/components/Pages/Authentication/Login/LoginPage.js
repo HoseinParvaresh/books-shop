@@ -76,7 +76,7 @@ export default function LoginPage() {
                 </div>
             </div>
             <div className="max-w-[330px] w-full mx-auto text-center mt-7 sm:mt-8">
-                <p> با عضویت در سایت، تمامی قوانین و شرایط استفاده از خدمات <a href="#"> وبسایت </a> را پذیرفته اید. </p>
+                <p> با عضویت در سایت، تمامی قوانین و شرایط استفاده از خدمات وبسایت  را پذیرفته اید. </p>
             </div>
             {/* background color */}
             <div className="hidden lg:block absolute top-0 left-0 w-[300px] h-[300px] bg-sky-500 opacity-20 blur-[120px] rounded-full"></div>

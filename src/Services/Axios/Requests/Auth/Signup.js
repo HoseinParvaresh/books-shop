@@ -27,9 +27,9 @@ const validatorUser = async (userName,phoneNumber,email) => {
 
     const users = await apiRequests.get('/users')
            
-    const userValid = users.data.some(user => {return user.userName == userName})
-    const emailValid = users.data.some(user => {return user.email == email})
-    const numberValid = users.data.some(user => {return user.phoneNumber == phoneNumber})
+    const userValid = users.data.some(user => {return user.userName === userName})
+    const emailValid = users.data.some(user => {return user.email === email})
+    const numberValid = users.data.some(user => {return user.phoneNumber === phoneNumber})
     
     if(userValid) {
         Alert('error','نام کاربری وارد شده قبلا استفاده شده است.')
@@ -53,5 +53,4 @@ const addUser = (data) => {
         localStorage.setItem('name',res.data.userName)
     }); 
 }
-
 export {validatorInfo,validatorUser,addUser}

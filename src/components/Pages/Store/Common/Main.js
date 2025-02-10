@@ -159,30 +159,30 @@ export default function Main(Props) {
 				</button>
 			</div>
 			<div className="bottom-sheet__body">
-				<a href="#" data-id="default" className="bottom-sheet__item bottom-sheet__item--selected">
+				<div data-id="default" className="bottom-sheet__item bottom-sheet__item--selected">
 					<span>همه دوره ها</span>
 					<svg className="w-6 h-6">
 						<use href="#check-circle"></use>
 					</svg>
-				</a>
-				<a href="#" data-id="cheapest" className="bottom-sheet__item ">
+				</div>
+				<div data-id="cheapest" className="bottom-sheet__item ">
 					<span>ارزان ترین</span>
 					<svg className="w-6 h-6">
 						<use href="#check-circle"></use>
 					</svg>
-				</a>
-				<a href="#" data-id="expensive" className="bottom-sheet__item ">
+				</div>
+				<div data-id="expensive" className="bottom-sheet__item ">
 					<span>گران ترین</span>
 					<svg className="w-6 h-6">
 						<use href="#check-circle"></use>
 					</svg>
-				</a>
-				<a href="#" data-id="popular" className="bottom-sheet__item ">
+				</div>
+				<div data-id="popular" className="bottom-sheet__item ">
 					<span>پرمخاطب ها</span>
 					<svg className="w-6 h-6">
 						<use href="#check-circle"></use>
 					</svg>
-				</a>
+				</div>
 			</div>
 		</div>
 		{/* <!-- Filter --> */}

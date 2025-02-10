@@ -30,7 +30,7 @@ export default function BookSwapPage() {
     <div className='text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900 font-Dana'>
       <div><Toaster position="top-right"/></div>
       <Header/>
-      {Products.length != 0 ? <Main booksSwap={Products} categoryList={categoryList} title={"کتاب های کاربران"}/> : ""}
+      {Products.length !== 0 ? <Main booksSwap={Products} categoryList={categoryList} title={"کتاب های کاربران"}/> : ""}
       <Footer/>
     </div>
   )

@@ -36,7 +36,7 @@ export default function MyChatsPage() {
                 {/* message */}
                 <p className='line-clamp-1 text-sm text-black/50 dark:text-white/50'>  {chat.messages.length > 0 ? chat.messages[chat.messages.length - 1].content : ''} </p>
                 {/* username */}
-                <p className='text-xs line-clamp-1'> {chat.participants[0].id == localStorage.getItem('id') ? chat.participants[1].name : chat.participants[0].name} </p>
+                <p className='text-xs line-clamp-1'> {chat.participants[0].id === localStorage.getItem('id') ? chat.participants[1].name : chat.participants[0].name} </p>
               </div>
             </div>
             {/* button */}

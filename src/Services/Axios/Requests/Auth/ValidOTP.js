@@ -1,5 +1,6 @@
 import Alert from "../../../../components/Utils/Alert"
 import { addUser } from "./Signup"
+import baseURL from './../../../../components/Utils/helperFunction/baseURL'
 
 
 function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
@@ -7,7 +8,7 @@ function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 
     const otpInputs = otpInput1+otpInput2+otpInput3+otpInput4+otpInput5
 
-	if(otpInputs != otp) {
+	if(otpInputs !== otp) {
 		Alert('error','کد وارد شده صحیح نیست')
 		return
 	}
@@ -26,7 +27,7 @@ function validOTP (otp,otpInput1,otpInput2,otpInput3,otpInput4,otpInput5,
 		}
 		addUser(newUser)
 		setTimeout(()=>{
-		window.location.replace('http://localhost:3001');
+		window.location.replace(baseURL);
 	}, 1500)
 }
 

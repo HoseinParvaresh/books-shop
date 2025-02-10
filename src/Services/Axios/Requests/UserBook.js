@@ -1,6 +1,7 @@
 import Alert from "../../../components/Utils/Alert"
 import validator from "validator"
 import apiRequests from './../Configs/Configs'
+import baseURL from './../../../components/Utils/helperFunction/baseURL'
 
 const validatorUserBook = (userBook) => {
     
@@ -36,12 +37,10 @@ const validatorUserBook = (userBook) => {
 }
 const addUserBook = (data) => {
     apiRequests.post('/userBooks',data).then(res => {
-        if (res.status = 201) {
             Alert('success','کتاب شما ثبت و بعد از بررسی منتشر خواهد شد.')
             setTimeout(()=>{
-                window.location.replace('http://localhost:3001/user-dashboard/main-panel');
+                window.location.replace(`${baseURL}/user-dashboard/main-panel`);
             }, 2000)
-        }
     }); 
 }
 const uploadImage = async (image1,image2,image3,image4,image5,data) => {
@@ -80,7 +79,7 @@ const upload = async (file) => {
     const cloud_name = "dt0lzjiwt"
     const api_key = "695583444611436"
     
-    if (file.name == undefined) {
+    if (file.name === undefined) {
       return false;
     }
   

@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast'
 
 export default function AddBook() {
 
-  const [user,userBooks] = useOutletContext()
+  const [user] = useOutletContext()
 
   const [title,setTitle] = useState('')
   const [category,setCategory] = useState('')

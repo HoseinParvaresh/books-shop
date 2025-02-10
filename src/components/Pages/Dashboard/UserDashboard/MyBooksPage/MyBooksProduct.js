@@ -9,7 +9,7 @@ export default function MyBooksProduct({book}) {
     <div className="flex flex-col bg-white dark:bg-primary-dark px-3 pt-3 rounded">
           <div className="relative aspect-video -mx-3 -mt-3 mb-3">
             <img src={img} className="size-full object-cover rounded h-40" alt={book.title}/>
-            <a href={`/user-book/${book.id}`} target="_blank">
+            <a href={`/user-book/${book.id}`}>
                 <svg className="size-16 md:size-21 absolute inset-0 m-auto text-gray-100">
                     <use href="#play-circle-solid"></use>
                 </svg>

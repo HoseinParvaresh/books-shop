@@ -27,7 +27,7 @@ export default function ProductPage() {
     fetchData();
   }, []);
 
-  const productData = Products.find(product => product.id == params.id)
+  const productData = Products.find(product => product.id === params.id)
   
   let product = {relatedProduct: [{...Products[(Math.floor(Math.random() * Products.length))]},{...Products[(Math.floor(Math.random() * Products.length))]},
                   {...Products[(Math.floor(Math.random() * Products.length))]},{...Products[(Math.floor(Math.random() * Products.length))]}]}

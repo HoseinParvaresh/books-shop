@@ -11,23 +11,19 @@ export default function Home() {
   const [publishers,setPublishers] = useState()
   const [quoteCard,setQuoteCard] = useState()
   const [userBooks,setUserBooks] = useState()
-
   
   // get books data 
   const fetchData = async () => {
     try {
       const responseBook = await apiRequests.get("/books");
-      setBooks(responseBook.data);
-
       const responsePublisher = await apiRequests.get("/publisher");
-      setPublishers(responsePublisher.data);
-
-
       const responseBookCard = await apiRequests.get("/quoteCard");
-      setQuoteCard(responseBookCard.data)  
-
       const responseUserBooks = await apiRequests.get("/userBooks");
-      setUserBooks(responseUserBooks.data)  
+      
+      setBooks(responseBook.data);
+      setPublishers(responsePublisher.data);
+      setQuoteCard(responseBookCard.data) 
+      setUserBooks(responseUserBooks.data)   
           
     } catch (error) {
       Alert('error','Error fetching data from Main.js in Main Page')

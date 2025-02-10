@@ -9,7 +9,7 @@ export default function SignUp() {
     const [userName] = useState(localStorage.getItem('name'));
 
     const signupButtonHandler = () => {
-        toggle == 'hide' ?
+        toggle === 'hide' ?
         setToggle('show') :
         setToggle('hide')
     }

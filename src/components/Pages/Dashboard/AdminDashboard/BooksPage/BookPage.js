@@ -1,13 +1,12 @@
 import React,{useEffect} from 'react'
 import StatusOverview from '../../Common/StatusOverview';
-import AccountOverviewSection from '../../Common/AccountOverviewSection';
 import { useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { calcDiscountPrice,FormatNumber } from '../../../../Utils/helperFunction';
 
 export default function BookPage() {
 
-    const [books,users,userBook,menus,chats] = useOutletContext();
+    const [books] = useOutletContext();
 
     useEffect(() => {
         document.getElementById('aside-btn-2').classList.add('aside-btn--active')        
@@ -21,14 +20,8 @@ export default function BookPage() {
                     {id:2,icon:'#all-ticket',text:'کتاب های تخفیف دار',value:[...books.filter(book => book.discount)].length},
                     {id:3,icon:'#bookmark',text:'کتاب های ناموجود',value:[...books.filter(book => !book.available)].length},
                 ]}/>
-        {/* Overview Section / inputs / buttons */}
-        <div className="block mt-6 md:mt-10">
-            <AccountOverviewSection items={[
-                        {id:1,title:'کتاب ها'},
-                ]}/>
-        </div>
         {/* books table */}
-        <div className="h-96 scroll-style">
+        <div className="h-[465px] scroll-style mt-10">
             {/* table */}
             <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
                 <table className="table">

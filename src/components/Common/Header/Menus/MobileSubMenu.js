@@ -6,7 +6,7 @@ export default function MobileSubMenu(Props) {
     const [mobileSubMenu,setMobileSubMenu] = useState([''])
 
     const showAndHideSubMenu = () => {
-        mobileSubMenu == '' ?
+        mobileSubMenu === '' ?
         setMobileSubMenu('mobile-menu__wrapper--open') :
         setMobileSubMenu('')
     }

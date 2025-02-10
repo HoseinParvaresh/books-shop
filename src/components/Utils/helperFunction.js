@@ -34,7 +34,11 @@ const provinces = [
   {id:31,name:'یزد '},
 ]
 const isLogin = localStorage.getItem('id') && localStorage.getItem('name');
-const isAdmin = (localStorage.getItem('id') == 'admin') && (localStorage.getItem('name') == 'admin')
+const isAdmin = (localStorage.getItem('id') === 'admin') && (localStorage.getItem('name') === 'admin')
+const userId = localStorage.getItem('id');
+const userName = localStorage.getItem('name')
+const baseURL = 'https://books-shop.liara.run'
+
 
 function FormatNumber (num) {
     return new Intl.NumberFormat('en-US', {style : "decimal" }).format(num);
@@ -102,4 +106,4 @@ function userSignOut () {
 }
 
 export {FormatNumber,calcDiscountPrice,switchTheme,checkLogin,calcRelativeTimeDifference,calcMessageSendTime,provinces,findImage,
-        isLogin,isAdmin,userSignOut}
+        isLogin,isAdmin,userSignOut,userId,userName,baseURL}

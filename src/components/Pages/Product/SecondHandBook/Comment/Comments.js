@@ -1,7 +1,6 @@
 import React from 'react'
 import NoComment from './NoComment'
 import CommentHead from './CommentHead'
-import CommentList from './CommentList'
 
 export default function Comment(Props) {
 

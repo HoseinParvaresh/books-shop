@@ -231,7 +231,7 @@ export default function Main(Props) {
 						<img className="block mb-4 mx-auto object-cover rounded-full" width="90" height="90" src={Props.author.image} alt={Props.author.name} loading='lazy'/>
 						<span className="font-DanaBold text-lg mb-2"> {Props.author.name} | نویسنده </span>
 						<p className="mt-2"></p>
-						<a href="#" className="button-primary button-outline button-lg mx-auto mt-4"> مشاهده کتاب های بیشتر </a>
+						<div className="button-primary button-outline button-lg mx-auto mt-4"> مشاهده کتاب های بیشتر </div>
 					</div>
 			</aside>	
 		</section>

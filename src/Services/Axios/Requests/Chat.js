@@ -4,7 +4,7 @@ async function addChat(userId,userName,bookId,createdId,createdName,title,image)
 
     apiRequests.get("/chats").then(res => {
         const valid = res.data.some((chat) => {
-        return chat.id == `${userId}-${bookId}`
+        return chat.id === `${userId}-${bookId}`
     })
         if(!valid) {
             const newChat = {

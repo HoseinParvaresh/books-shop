@@ -150,7 +150,7 @@ export default function Register() {
 					</form>
 					{/* Resend OTP */}
 					<div className="flex items-center justify-between font-danaMedium text-sm text-slate-500 mt-5">
-						<a href="#" className="underline underline-offset-2">حریم خصوصی</a>
+						<div className="underline underline-offset-2">حریم خصوصی</div>
 						<button type="button" className="user-otp__resend">
 							<span onClick={resendOtp}> ارسال دوباره </span>
 						</button>
@@ -159,7 +159,7 @@ export default function Register() {
 			</div>
 			{/* bottom form text */}
 			<div className="max-w-[330px] w-full mx-auto text-center mt-7 sm:mt-8">
-				<p> با عضویت در سایت، تمامی <a href="#" className='text-green-500'>قوانین و شرایط</a> استفاده از خدمات وبسایت را پذیرفته اید. </p>
+				<p> با عضویت در سایت، تمامی <div className='text-green-500'>قوانین و شرایط</div> استفاده از خدمات وبسایت را پذیرفته اید. </p>
 			</div>
 			{/* background color */}
 			<div className="hidden lg:block absolute top-0 left-0 w-[300px] h-[300px] bg-sky-500 opacity-20 blur-[120px] rounded-full"></div>

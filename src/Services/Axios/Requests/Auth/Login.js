@@ -6,7 +6,7 @@ function Login(users,emailInput,passwordInput) {
 
     let valid = users.some((user) => {
         userInfo = user
-        return user.email == emailInput && user.password == passwordInput
+        return user.email === emailInput && user.password === passwordInput
     })
     
     if(valid) {
@@ -14,7 +14,7 @@ function Login(users,emailInput,passwordInput) {
         localStorage.setItem('id',userInfo.id)
         localStorage.setItem('name',userInfo.userName)
         setTimeout(()=>{
-            window.location.replace('http://localhost:3001');
+            window.location.replace('https://books-shop.liara.run');
         }, 1500)
     } else {
         Alert('error','کاربری با این ایمیل و رمز عبور یافت نشد.')

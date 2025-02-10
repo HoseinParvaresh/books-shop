@@ -20,12 +20,15 @@ export default function StatusOverview({button,items}) {
             }
         </div>
         {/* status overview button */}
-        <Link to={button.link} type="button" className="flex order-1 sm:order-2 items-center justify-between gap-x-6 w-full sm:w-auto md:w-full lg:w-auto text-sky-500 bg-transparent border border-sky-500 px-4 h-15 sm:h-20 font-DanaBold rounded cursor-pointer">
-            {button.text}
-            <svg className="size-7">
-                <use href="#plus-circle"></use>
-            </svg>
-        </Link>
+        {
+            button && 
+            <Link to={button.link} type="button" className="flex order-1 sm:order-2 items-center justify-between gap-x-6 w-full sm:w-auto md:w-full lg:w-auto text-sky-500 bg-transparent border border-sky-500 px-4 h-15 sm:h-20 font-DanaBold rounded cursor-pointer">
+                {button.text}
+                <svg className="size-7">
+                    <use href="#plus-circle"></use>
+                </svg>
+            </Link>
+        }
     </div>
   )
 }

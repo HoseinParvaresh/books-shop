@@ -13,18 +13,18 @@ export default function ProductPage() {
 
   document.documentElement.scrollTop = 0;
 
-  const params = useParams()  
-
-  const fetchData = async () => {
-    try {
-      const response = await apiRequests.get(`/userBooks/${params.id}`);     
-      setUserBooks(response.data);
-      
-    } catch (error) {
-      Alert('error',"Error fetching data usersBooks")
-    }
-  };
+  
   useEffect(() => {
+    const fetchData = async () => {
+      const params = useParams()
+      try {
+        const response = await apiRequests.get(`/userBooks/${params.id}`);     
+        setUserBooks(response.data);
+        
+      } catch (error) {
+        Alert('error',"Error fetching data usersBooks")
+      }
+    };
     fetchData();
   }, []);
    

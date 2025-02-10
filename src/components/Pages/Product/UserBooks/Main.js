@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import Breadcrumb from './../Common/Breadcrumb'
 import Summary from '../Common/Summary';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -157,7 +157,7 @@ export default function Main(Props) {
                     </button>
                     {/* chat button */}
                     {
-                        userId != Props.createdBy.id && 
+                        userId !== Props.createdBy.id && 
                         (   
                             <Link to={userId ? `/chat/${userId}-${Props.id}`: '#'} onClick={ChatWithTheUser} className="button-primary button-outline button-lg mx-auto mt-4 w-full"> 
                                 <svg className="w-6 h-6">

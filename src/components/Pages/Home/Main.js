@@ -30,16 +30,16 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
           }
           >
           <SwiperSlide>
-            <a href="#"><img className='hidden sm:block w-full' src="./images/bg1-desktop.jpg" alt="bg 1" loading='lazy'/></a>
-            <a href="#"><img className='block sm:hidden w-full' src="./images/bg1-mobile.jpg" alt="bg 1" loading='lazy'/></a>
+            <Link to={'/book-store'}><img className='hidden sm:block w-full' src="./images/bg1-desktop.jpg" alt="bg 1" loading='lazy'/></Link>
+            <Link to={'/book-store'}><img className='block sm:hidden w-full' src="./images/bg1-mobile.jpg" alt="bg 1" loading='lazy'/></Link>
           </SwiperSlide>
           <SwiperSlide>     
-              <a href="#"><img className='hidden sm:block w-full' src="./images/bg2-desktop.jpg" alt="bg 2" loading='lazy'/></a>
-              <a href="#"><img className='block sm:hidden w-full' src="./images/bg2-mobile.jpg" alt="bg 2" loading='lazy'/></a>
+              <Link to={'/book-store'}><img className='hidden sm:block w-full' src="./images/bg2-desktop.jpg" alt="bg 2" loading='lazy'/></Link>
+              <Link to={'/book-store'}><img className='block sm:hidden w-full' src="./images/bg2-mobile.jpg" alt="bg 2" loading='lazy'/></Link>
           </SwiperSlide>
           <SwiperSlide>     
-              <a href="#"><img className='hidden sm:block w-full' src="./images/bg3-desktop.jpg" alt="bg 3" loading='lazy'/></a>
-              <a href="#"><img className='block sm:hidden w-full' src="./images/bg3-mobile.jpg" alt="bg 3" loading='lazy'/></a>
+              <Link to={'/book-store'}><img className='hidden sm:block w-full' src="./images/bg3-desktop.jpg" alt="bg 3" loading='lazy'/></Link>
+              <Link to={'/book-store'}><img className='block sm:hidden w-full' src="./images/bg3-mobile.jpg" alt="bg 3" loading='lazy'/></Link>
           </SwiperSlide>
       </Swiper>
       {/* <!-- Categories --> */}
@@ -122,7 +122,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       <use href="#percent-badge"></use>
                   </svg>
                   {/* show more */}
-                  <Link to={'/shop'} className="flex items-center gap-1">
+                  <Link to={'/book-store'} className="flex items-center gap-1">
                       <span className="font-DanaBold text-sm md:text-base ">مشاهده همه</span>
                       <svg className="size-3 xs:size-5">
                           <use href="#chevron-left-mini"></use>
@@ -205,7 +205,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                   quoteCard.length > 0  &&
                   quoteCard[0].bookQuote.map((bq,index) => (
                     <SwiperSlide key={index}>
-                      <QuoteCard book={books.find(product => bq.bookName == product.title)} bookQuote={bq}/>
+                      <QuoteCard book={books.find(product => bq.bookName === product.title)} bookQuote={bq}/>
                     </SwiperSlide>
                   ))
                 }

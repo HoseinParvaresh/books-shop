@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import apiRequests from '../../../Services/Axios/Configs/Configs';
 import Alert from '../../Utils/Alert';
 import { Mosaic } from 'react-loading-indicators';
-import { checkLogin } from '../../Utils/helperFunction';
+import { checkLogin,userId } from '../../Utils/helperFunction';
 import { Link } from 'react-router-dom';
 
 export default function Main() {
@@ -12,23 +12,22 @@ export default function Main() {
 
     const [chat,setChat] = useState()
     const [messageValue,setMessageValue] = useState('')
-    const [userId] = useState(localStorage.getItem('id'))
     const [loading,setLoading] = useState(false)
     const [bookData,setBookData] = useState([])
 
-    let params = useParams()
+    const params = useParams();
   
-    const fetchData = async () => {
-      try {
-        const response = await apiRequests.get(`/chats/${params.id}`);      
-        const responseBook = await apiRequests.get(`/userBooks/${params.id.slice((params.id.indexOf('-')) + 1)}`)
-        setChat(response.data);
-        setBookData(responseBook.data)
-      } catch (error) {
-        Alert('error',"Error fetching chats")
-      }
-    };
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+              const response = await apiRequests.get(`/chats/${params.id}`);      
+              const responseBook = await apiRequests.get(`/userBooks/${params.id.slice((params.id.indexOf('-')) + 1)}`)
+              setChat(response.data);
+              setBookData(responseBook.data)
+            } catch (error) {
+              Alert('error',"Error fetching chats")
+            }
+          };
         setInterval(()=> {
             fetchData();
             setLoading(true)

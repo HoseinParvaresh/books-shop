@@ -8,15 +8,15 @@ export default function ShoppingCart() {
     const [Z_index,setZ_index] = useState('')
 
     const shoppingCartHandler = () => {
-        toggleBox == 'hide' ?
+        toggleBox === 'hide' ?
         setToggleBox('show') :
         setToggleBox('hide')
 
-        toggleOverlay == 'hide' ? 
+        toggleOverlay === 'hide' ? 
         setToggleOverlay('show') :
         setToggleOverlay('hide')
 
-        Z_index == '' ? 
+        Z_index === '' ? 
         setZ_index('z-20') :
         setZ_index('')
     }
@@ -26,13 +26,13 @@ export default function ShoppingCart() {
         <div onClick={shoppingCartHandler} className={`overlay ${toggleOverlay}`}></div>
         <div className={`group relative rounded-full ${Z_index}`}>
             {/* <!-- cart button --> */}
-            <a onClick={shoppingCartHandler} href="#">
+            <div onClick={shoppingCartHandler}>
                 <button type="button" className="button-lg md:button-xl only-icon bg-gray-100 text-slate-500 dark:bg-white/5 dark:text-white ">
                     <svg className="size-5.5 md:size-6">
                         <use href="#shopping-cart"></use>
                     </svg>
                 </button>   
-            </a>
+            </div>
             
             {/* <!-- cart drop down --> */}
             <div className={`${Z_index} pt-5 absolute left-0 transition-all ${toggleBox}`}>
