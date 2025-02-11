@@ -33,7 +33,11 @@
 
 @layer components {
 
-    /* buttons */
+    /* ╔══════════════════════════════╗ */
+    /* ║            Button            ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ... reset ... } ------ */
     [class*=button-] {
         width: -moz-max-content;
         -webkit-user-select: none;
@@ -41,6 +45,7 @@
         user-select: none;
         @apply flex-center w-max cursor-pointer rounded-full font-Dana transition-all
     }
+    /* ------ { ... Primary ... } ------ */
     .button-primary {
         @apply bg-primary text-primary-light 
     }
@@ -54,12 +59,18 @@
     .button-primary.button-outline:hover {
         @apply bg-primary text-primary-light
     }
+    /* ------ { ... Secondary ... } ------ */
     .button-secondary {
         @apply bg-sky-500 text-primary-light 
     }
     .button-secondary:hover {
         @apply bg-sky-600
     }
+     /* ------ { ... Disable ... } ------ */
+     .button-disabled,.button-disabled:hover {
+        @apply !bg-gray-300 !cursor-not-allowed !text-white !border-none
+    }
+    /* ------ { ... Size ... } ------ */
     .button-2xl {
         -moz-column-gap: .625rem;
         column-gap: .625rem;
@@ -81,21 +92,42 @@
         column-gap: .625rem;
         @apply text-sm leading-6
     }
-    .button-xs {
-        @apply h-8.5 px-2.5
+    .button-base {
+        @apply h-11 px-3.5
     }
     .button-sm {
         @apply h-10 px-3
     }
-    .button-base {
-        @apply h-11 px-3.5
-    }
-    .button-disabled,.button-disabled:hover {
-        @apply !bg-gray-300 !cursor-not-allowed !text-white !border-none
+    .button-xs {
+        @apply h-8.5 px-2.5
     }
 
 
-    /* helper */
+    /* ╔══════════════════════════════╗ */
+    /* ║        Utility Class         ║ */
+    /* ╚══════════════════════════════╝ */
+    .overlay {
+        @apply w-full h-screen z-10 fixed inset-0 backdrop-blur-sm transition-all
+    }
+    .mobile-overlay {
+        @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0
+    }
+    .menu-active {
+        @apply !right-0
+    }
+    .dashboard-link {
+        @apply flex items-center justify-between px-2.5 h-12 rounded-lg text-black dark:text-white hover:text-white hover:bg-green-500 transition-colors
+    }
+    .only-icon {
+        @apply aspect-square px-0
+    }
+    .scroll-style {
+        @apply border-l-8 border-y-8 border-transparent overflow-scroll overflow-x-hidden
+    }
+
+    /* ╔══════════════════════════════╗ */
+    /* ║         Helper Class         ║ */
+    /* ╚══════════════════════════════╝ */
     .flex-center {
         @apply flex items-center justify-center
     }
@@ -105,34 +137,6 @@
     .show {
         @apply !visible !opacity-100
     }
-    .overlay {
-        @apply w-full h-screen z-10 fixed inset-0 backdrop-blur-sm transition-all
-    }
-    .mobile-overlay {
-        @apply z-20 fixed w-full h-screen bg-black/50 inset-0 invisible opacity-0
-    }
-    /* title => in home page */
-    .title {
-        @apply flex items-center justify-between text-[17px] text-center relative my-4 mx-0 font-MorabbaBold
-         dark:text-white md:text-[22px]
-    }
-    .title b {
-        background-color: black;
-        display: block;
-        flex: 1;
-        height: 1px;
-        opacity: 0.2;
-        @apply dark:bg-white 
-    }
-    .title p {
-        margin: 0 1rem;
-    }
-    .menu-active {
-        right: 0 !important;
-    }
-    .dashboard-link {
-        @apply flex items-center justify-between px-2.5 h-12 rounded-lg text-black dark:text-white hover:text-white hover:bg-green-500 transition-colors
-    }
     .dir-ltr {
         direction: ltr;
     }
@@ -140,7 +144,28 @@
         direction: rtl;
     }
 
-    /* table */
+
+    /* ╔══════════════════════════════╗ */
+    /* ║           Home Page          ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ... Title ... } ------ */
+    .title {
+        @apply flex items-center justify-between text-[17px] text-center relative my-4 mx-0 font-MorabbaBold
+         dark:text-white md:text-[22px]
+    }
+    .title b {
+        @apply bg-black/20 block flex-1 h-px dark:bg-white/20
+    }
+    .title p {
+        @apply my-0 mx-1
+    }
+
+    /* ╔══════════════════════════════╗ */
+    /* ║     Admin Dashboard Page     ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ... Table ... } ------ */
     .table {
         @apply w-full text-sm text-gray-500 dark:text-gray-400 rounded-md overflow-hidden text-center
     }
@@ -159,8 +184,15 @@
     .table__body--row {
         @apply hover:bg-gray-50 dark:hover:bg-gray-600 bg-white dark:border-gray-700 dark:bg-gray-800 child:whitespace-nowrap child:text-gray-900 child:dark:text-white/80 child:px-6 child:py-4
     }
-    
-    /* breadcrumb => shop page */
+    .aside-btn--active {
+        @apply text-blue-500
+    }
+
+    /* ╔══════════════════════════════╗ */
+    /* ║         Product Page         ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ... Breadcrumb ... } ------ */
     .breadcrumb {
         @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-neutral-100 
         rounded-xl bg-primary-light dark:bg-primary-dark dark:border-primary-dark dark:text-primary-light 
@@ -181,25 +213,13 @@
     .breadcrumb__item:first-child {
         @apply pr-4 pl-2
     }
+    
 
+    /* ╔══════════════════════════════╗ */
+    /* ║          Store Page          ║ */
+    /* ╚══════════════════════════════╝ */
 
-    /* register page  */
-    .form-input.has-icon {
-        padding-left: 2.375rem;
-        padding-right: .875rem;
-    }
-    .form-input {
-        @apply h-13 w-full rounded-[10px] bg-gray-100 dark:bg-primary-darker px-3.5 
-        text-sm leading-6 text-slate-500 dark:text-primary-light transition-all outline-none
-    }
-    .form-input+svg {
-        @apply absolute inset-y-0 my-auto size-5 text-slate-500 transition-all
-    }
-    .otp__form input {
-        @apply size-13 p-0 text-center font-DanaBold text-xl leading-[2.125rem]
-    }
-
-    /* shop page */
+    /* ------ { ... Toggle ... } ------ */
     .toggle {
         position: relative;
         cursor: pointer;
@@ -239,9 +259,13 @@
         content: var(--tw-content);
         @apply dark:bg-[#202e38]
     }
-    .toggle__input,.checkbox__input {
-        @apply absolute size-0 opacity-0;
+    .toggle__input {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
     }
+    /* ------ { ... Check Box ... } ------ */
     .checkbox__input::after {
         position: relative;
         display: block;
@@ -266,12 +290,6 @@
         background-repeat: no-repeat;
         background-position: center;
     }
-    .toggle__input {
-        position: absolute;
-        height: 0;
-        width: 0;
-        opacity: 0;
-    }
     .checkbox {
         @apply relative flex cursor-pointer items-center;
         -webkit-user-select: none;
@@ -286,11 +304,16 @@
     .checkbox__input:checked~.checkbox__marker {
         @apply bg-blue-500
     }
+    /* ------ { ... Sort ... } ------ */
     .sort-btn {
         @apply inline-block border-y-2 border-transparent font-Dana text-sm leading-[64px] transition-all;
     }
     .sort-btn--active {
         @apply border-blue-500 text-blue-500
+    }
+    /* ------ { ... Common ... } ------ */
+    .toggle__input,.checkbox__input {
+        @apply absolute size-0 opacity-0;
     }
     .toggle__input:checked~.toggle__marker {
         @apply bg-blue-500
@@ -298,6 +321,7 @@
     .toggle__input:checked~.toggle__marker:after {
         @apply right-[26px]
     }
+    /* ------ { ... Filter ... } ------ */
     .filter {
         visibility: hidden;
         position: fixed;
@@ -356,21 +380,37 @@
         padding-right: 1.25rem;
         padding-bottom: 2rem;
     }
-    
     .filter--open {
         visibility: visible;
         opacity: 1;
     }
-    .only-icon {
-        aspect-ratio: 1 / 1;
-        padding-left: 0;
-        padding-right: 0;
+
+    /* ╔══════════════════════════════╗ */
+    /* ║         Register Page        ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ...  Form  ... } ------ */
+    .form-input.has-icon {
+        padding-left: 2.375rem;
+        padding-right: .875rem;
     }
-    .aside-btn--active {
-        @apply text-blue-500
+    .form-input {
+        @apply h-13 w-full rounded-[10px] bg-gray-100 dark:bg-primary-darker px-3.5 
+        text-sm leading-6 text-slate-500 dark:text-primary-light transition-all outline-none
+    }
+    .form-input+svg {
+        @apply absolute inset-y-0 my-auto size-5 text-slate-500 transition-all
+    }
+    .otp__form input {
+        @apply size-13 p-0 text-center font-DanaBold text-xl leading-[2.125rem]
     }
 
-    /* mobile menu */
+
+    /* ╔══════════════════════════════╗ */
+    /* ║            Header            ║ */
+    /* ╚══════════════════════════════╝ */
+
+    /* ------ { ...  Mobile Menu  ... } ------ */
     .mobile-menu {
         display: flex;
         width: 100%;
@@ -413,8 +453,10 @@
         margin-bottom: calc(.75rem* var(--tw-space-y-reverse));
     }
 
-    
-    /* chat */
+    /* ╔══════════════════════════════╗ */
+    /* ║           Scroll Bar         ║ */
+    /* ╚══════════════════════════════╝ */
+
     .scrollbar-w-2::-webkit-scrollbar {
         width: 0.25rem;
         height: 0.25rem;
@@ -424,18 +466,13 @@
         background-color: #f7fafc;
         background-color: rgba(247, 250, 252, var(--bg-opacity));
     }
-    
     .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
         --bg-opacity: 1;
         background-color: #edf2f7;
         background-color: rgba(237, 242, 247, var(--bg-opacity));
     }
-    
     .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
         border-radius: 0.25rem;
-    }
-    .scroll-style {
-        @apply border-l-8 border-y-8 border-transparent overflow-scroll overflow-x-hidden
     }
     .scroll-style::-webkit-scrollbar {
         width: 5px;
