@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<h1 align="center">Book Shop</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###
 
-## Available Scripts
+<br clear="both">
 
-In the project directory, you can run:
+<h2 align="left">🎯 About</h2>
 
-### `npm start`
+###
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="left">Are you tired of manually editing your GitHub profile or missing out on the amazing features you can add to it? 😩 Configuring GitHub actions can also be a hassle, right? Say no more! 💪<br><br>Introducing a tool that lets you beautify your GitHub profile with a customized README, easily and in no time! ✨ You can include whatever content you want, wherever you want it (within the limitations of markdown, of course). 📝<br><br>With this amazing tool, creating your own README has never been so simple and fast. ⚡ You can save time and focus on what really matters - showcasing your skills and projects. 🚀<br><br>Don't miss out on the opportunity to enhance your GitHub profile. Give it a try and see for yourself how easy and convenient it is! 😉</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###
 
-### `npm test`
+<div align="center">
+  <img height="200" src="https://i.imgflip.com/65efzo.gif"/>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###
 
-### `npm run build`
+<h2 align="left">🚀 Main Technologies</h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="left">
+  <a href="https://react.dev/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  /></a>
+  <img width="12" />
+  <a href="https://tailwindcss.com/"><img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo"  /></a>
+  <img width="12" />
+  <a href="https://swiperjs.com/"><img src="https://swiperjs.com/images/swiper-logo.svg" height="40" alt="tailwindcss logo"  /></a>
+  <img width="12" />
+  <a href="https://reactrouter.com/"><img src="https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Logo/Dark.svg" height="40" alt="tailwindcss logo"  /></a>
+</div>
+<br clear="both">
+<details>
+  <summary>See more</summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ###
+  * [json Server](https://www.npmjs.com/package/json-server)
+  * [Axios](https://styled-icons.js.org)
+  * [React Hot Toast](https://github.com/morajabi/styled-media-query)
+  * [React Loading Indicators](https://react-loading-indicators.netlify.app/)
+  * [React Date Object](https://shahabyazdi.github.io/react-date-object/)
+  * [validator](https://www.npmjs.com/package/validator)
+  
+</details>
 
-### `npm run eject`
+###
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2 align="left">✅ Requirements</h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="left">Before starting :checkered_flag:, make sure you have <a href="https://git-scm.com">Git</a> and <a href="https://nodejs.org/en/">Node</a> installed on your system.</p>
+<p align="left">Make sure you install TailwindCss v3 </p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+###
 
-## Learn More
+<h2 align="left">🏁 Starting</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###
+```bash
+# Clone this project
+$ git clone https://github.com/HoseinParvaresh/books-shop
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+$ npm install
 
-### Code Splitting
+# Start json-server
+$ npm run db
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Run the project
+$ npm start
 
-### Analyzing the Bundle Size
+# The server will initialize in the <http://localhost:3001>
+```
+###
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<h2 align="left">🎮 Scripts</h2>
 
-### Making a Progressive Web App
+###
+  - `db`: start the json-server at `localhost:3000`;
+  - `start`: starts the application in production mode at `localhost:3001`;
+  - `build`: creates an optimized production build of the application;
+  - `test`: runs the tests;
+  - `tailwind`: build css files;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+###
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<h2 align="left">📝 License</h2>
 
-### Deployment
+###
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<p align="left">This project is licensed under the MIT License. For more details, please refer to the <a href="https://github.com/maurodesouza/profile-readme-generator/blob/main/LICENSE.md">LICENSE</a> file.<br><br>Made with ❤️ by Hosein Parvaresh</p>
 
-### `npm run build` fails to minify
+###
+<a href="#top">Back to top</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="left">Readme created with <a href="https://github.com/maurodesouza/profile-readme-generator/tree/main">profile-readme-generator</a></p>
+
+###
