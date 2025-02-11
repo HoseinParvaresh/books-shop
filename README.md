@@ -1,4 +1,4 @@
-<h1 align="center">Book Shop</h1>
+<h1 align="center">Secondhand Books Site</h1>
 
 ###
 
@@ -6,9 +6,10 @@
 
 <h2 align="left">🎯 About</h2>
 
+
 ###
 
-<p align="left">Are you tired of manually editing your GitHub profile or missing out on the amazing features you can add to it? 😩 Configuring GitHub actions can also be a hassle, right? Say no more! 💪<br><br>Introducing a tool that lets you beautify your GitHub profile with a customized README, easily and in no time! ✨ You can include whatever content you want, wherever you want it (within the limitations of markdown, of course). 📝<br><br>With this amazing tool, creating your own README has never been so simple and fast. ⚡ You can save time and focus on what really matters - showcasing your skills and projects. 🚀<br><br>Don't miss out on the opportunity to enhance your GitHub profile. Give it a try and see for yourself how easy and convenient it is! 😉</p>
+<p align="left">This website is an online platform for buying, selling, and exchanging second-hand books.📖<br><br> Aimed at reducing educational costs 💰 and increasing access to book materials, this platform provides an environment where users can easily acquire the books they need or offer their own books to others. <br><br> In addition to buying and selling, book exchange is also possible 🔄, allowing users to obtain new resources without additional costs.<br><br> Furthermore, an internal messaging system 💬 is embedded in the site, enabling users to communicate about book details and exchange arrangements.</p>
 
 ###
 
@@ -66,25 +67,20 @@ $ git clone https://github.com/HoseinParvaresh/books-shop
 # Install dependencies
 $ npm install
 
-# Start json-server
-$ npm run db
-
 # Run the project
 $ npm start
 
-# The server will initialize in the <http://localhost:3001>
+# The server will initialize in the <http://localhost:3000>
 ```
 ###
 
 <h2 align="left">🎮 Scripts</h2>
 
 ###
-  - `db`: start the json-server at `localhost:3000`;
-  - `start`: starts the application in production mode at `localhost:3001`;
+  - `start`: starts the application in production mode at `localhost:3000`;
   - `build`: creates an optimized production build of the application;
   - `test`: runs the tests;
   - `tailwind`: build css files;
-
 
 ###
 
