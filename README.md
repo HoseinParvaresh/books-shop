@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<h1 align="center">Secondhand Books Site</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###
 
-## Available Scripts
+<br clear="both">
 
-In the project directory, you can run:
+<h2 align="left">🎯 About</h2>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="left">This website is an online platform for buying, selling, and exchanging second-hand books.📖<br><br> Aimed at reducing educational costs 💰 and increasing access to book materials, this platform provides an environment where users can easily acquire the books they need or offer their own books to others. <br><br> In addition to buying and selling, book exchange is also possible 🔄, allowing users to obtain new resources without additional costs.<br><br> Furthermore, an internal messaging system 💬 is embedded in the site, enabling users to communicate about book details and exchange arrangements.</p>
 
-### `npm test`
+###
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<div align="center">
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/user-attachments/assets/5635a0ef-0fdf-4a28-b98e-afc0aeda5e1e
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</div>
 
-### `npm run eject`
+###
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2 align="left">🚀 Main Technologies</h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div align="left">
+  <a href="https://react.dev/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  /></a>
+  <img width="12" />
+  <a href="https://tailwindcss.com/"><img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo"  /></a>
+  <img width="12" />
+  <a href="https://swiperjs.com/"><img src="https://swiperjs.com/images/swiper-logo.svg" height="40" alt="tailwindcss logo"  /></a>
+  <img width="12" />
+  <a href="https://reactrouter.com/"><img src="https://reactrouter.com/_brand/React%20Router%20Brand%20Assets/React%20Router%20Logo/Dark.svg" height="40" alt="tailwindcss logo"  /></a>
+</div>
+<br clear="both">
+<details>
+  <summary>See more</summary>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ###
+  * [json Server](https://www.npmjs.com/package/json-server)
+  * [Axios](https://styled-icons.js.org)
+  * [React Hot Toast](https://github.com/morajabi/styled-media-query)
+  * [React Loading Indicators](https://react-loading-indicators.netlify.app/)
+  * [React Date Object](https://shahabyazdi.github.io/react-date-object/)
+  * [validator](https://www.npmjs.com/package/validator)
+  
+</details>
 
-## Learn More
+###
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2 align="left">✅ Requirements</h2>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+###
 
-### Code Splitting
+<p align="left">Before starting :checkered_flag:, make sure you have <a href="https://git-scm.com">Git</a> and <a href="https://nodejs.org/en/">Node</a> installed on your system.</p>
+<p align="left">Make sure you install TailwindCss v3 </p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###
 
-### Analyzing the Bundle Size
+<h2 align="left">🏁 Starting</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###
+```bash
+# Clone this project
+$ git clone https://github.com/HoseinParvaresh/books-shop
 
-### Making a Progressive Web App
+# Install dependencies
+$ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Run the project
+$ npm start
 
-### Advanced Configuration
+# The server will initialize in the <http://localhost:3000>
+```
+###
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<h2 align="left">🎮 Scripts</h2>
 
-### Deployment
+###
+  - `start`: starts the application in production mode at `localhost:3000`;
+  - `build`: creates an optimized production build of the application;
+  - `test`: runs the tests;
+  - `tailwind`: build css files;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+###
 
-### `npm run build` fails to minify
+<h2 align="left">📝 License</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###
+
+<p align="left">This project is licensed under the MIT License. For more details, please refer to the <a href="https://github.com/maurodesouza/profile-readme-generator/blob/main/LICENSE.md">LICENSE</a> file.<br><br>Made with ❤️ by Hosein Parvaresh</p>
+
+###
+<a href="#top">Back to top</a>
+
+<p align="left">Readme created with <a href="https://github.com/maurodesouza/profile-readme-generator/tree/main">profile-readme-generator</a></p>
+
+###
