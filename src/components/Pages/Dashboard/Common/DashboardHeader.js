@@ -3,6 +3,7 @@ import Theme from '../../../Common/Header/Buttons/Theme'
 import ShoppingCart from '../../../Common/Header/Buttons/ShoppingCart'
 import MobileLogo from '../../../Common/Header/Logo/MobileLogo'
 import BarsIcon from '../../../Common/Header/Buttons/BarsIcon'
+import { userName } from '../../../Utils/helperFunction'
 
 export default function DashboardHeader() {
 
@@ -27,7 +28,7 @@ export default function DashboardHeader() {
                 </div> 
                 {/* username */}
                 <div className="hidden xl:block text-slate-500 dark:text-gray-400">
-                    <span className="font-DanaBold ml-1">reza2000</span>
+                    <span className="font-DanaBold ml-1">{userName}</span>
                     عزیز، به پنل کاربریت خوش اومدی
                 </div>
             </div>
