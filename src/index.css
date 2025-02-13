@@ -170,16 +170,16 @@
         @apply w-full text-sm text-gray-500 dark:text-gray-400 rounded-md overflow-hidden text-center
     }
     .table__title {
-        @apply flex justify-between items-center p-3 shadow-md bg-white dark:bg-primary-darker mb-2 rounded-md
+        @apply flex justify-between items-center p-3 shadow-sm bg-white dark:bg-primary-darker mb-2 rounded-md
     }
     .table__head {
-        @apply  text-xs uppercase text-gray-700 dark:text-gray-400
+        @apply  text-xs text-gray-900 dark:text-gray-400 bg-gray-200 dark:bg-gray-700
     }
     .table__body {
         @apply divide-y
     }
     .table__head--row {
-        @apply bg-gray-50 px-6 py-3 dark:bg-gray-700
+        @apply  px-6 py-3 
     }
     .table__body--row {
         @apply hover:bg-gray-50 dark:hover:bg-gray-600 bg-white dark:border-gray-700 dark:bg-gray-800 child:whitespace-nowrap child:text-gray-900 child:dark:text-white/80 child:px-6 child:py-4

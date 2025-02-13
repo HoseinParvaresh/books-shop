@@ -8,7 +8,7 @@ export default function AdminMainPanelPage() {
 
     const [books,users,userBook] = useOutletContext()
     
-    useEffect(() => {
+    useEffect(() => {        
         document.getElementById('aside-btn-1').classList.add('aside-btn--active')        
       }, []);
 
@@ -23,18 +23,19 @@ export default function AdminMainPanelPage() {
                 {id:4,title:"تیکت ها",text:`${0} تیکت`,icon:"credit"},
             ]}/>
         </div>
+        {/* tables */}
         <div className='grid grid-cols-12 mt-7 gap-7'>
             {/* The newest users table => title / table */}
             <div className="overflow-hidden col-span-12 lg:col-span-5">
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>جدید ترین کاربران</p>
-                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                    <a href='/admin-dashboard/users' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
                         مشاهده همه
                         <svg className="size-4">
                             <use href="#chevron-left"></use>
                         </svg>
-                    </Link>
+                    </a>
                 </div>
                 {/* table */}
                 <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
@@ -67,12 +68,12 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>آخرین کتاب ها</p>
-                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                    <a href='/admin-dashboard/users' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
                         مشاهده همه
                         <svg className="size-4">
                             <use href="#chevron-left"></use>
                         </svg>
-                    </Link>
+                    </a>
                 </div>
                 {/* table */}
                 <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
@@ -109,12 +110,12 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>جدید ترین کتاب های کاربران</p>
-                    <Link to={'/admin-dashboard/users'} className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                    <a href='/admin-dashboard/users' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
                         مشاهده همه
                         <svg className="size-4">
                             <use href="#chevron-left"></use>
                         </svg>
-                    </Link>
+                    </a>
                 </div>
                 {/* table */}
                 <div className="relative dir-ltr overflow-x-scroll lg:overflow-auto">
