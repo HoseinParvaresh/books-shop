@@ -31,7 +31,6 @@ export default function BookPage() {
                             <th className="table__head--row"></th>
                             <th className="table__head--row">موجودی</th>
                             <th className="table__head--row">وضعیت کتاب</th>
-                            <th className="table__head--row">تعداد خریداران</th>
                             <th className="table__head--row">مقدار تخفیف</th>
                             <th className="table__head--row">قیمت با تخفیف (تومان)</th>
                             <th className="table__head--row">قیمت اصلی (تومان)</th>
@@ -48,10 +47,10 @@ export default function BookPage() {
                                     <td className='text-white'>
                                         <button className='rounded-md px-2 py-1 bg-red-500 hover:bg-red-600 transition-colors'>حذف</button>
                                         <button className='rounded-md px-2 py-1 bg-yellow-500 ml-2 hover:bg-yellow-600 transition-colors'>ویرایش</button>
+                                        <button className='rounded-md px-2 py-1 bg-green-500 ml-2 hover:bg-green-600 transition-colors'><Link to={`/book/${book.id}`}>مشاهده</Link></button>
                                     </td>
                                     <td className='flex justify-center'>{book.available ? <svg className="size-5 text-green-500"><use href="#check-circle"></use></svg> : <svg className="size-5 text-red-500"><use href="#x-circle-fill"></use></svg>}</td>
                                     <td>{book.status}</td>
-                                    <td>{book.buyer}</td>
                                     <td>{book.discount ? `${book.discount}%` : 0}</td>
                                     <td>{book.discount ? FormatNumber(calcDiscountPrice(book.price,book.discount)) :  FormatNumber(book.price)}</td>
                                     <td>{FormatNumber(book.price)}</td>

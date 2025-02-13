@@ -23,6 +23,7 @@ import { isAdmin,isLogin } from './components/Utils/helperFunction';
 import AdminMainPanelPage from './components/Pages/Dashboard/AdminDashboard/MainPanel/AdminMainPanelPage';
 import AdminDashboardBookPage from './components/Pages/Dashboard/AdminDashboard/BooksPage/BookPage';
 import UserPage from './components/Pages/Dashboard/AdminDashboard/UsersPage/UserPage';
+import UserBooksPage from './components/Pages/Dashboard/AdminDashboard/UserBooksPage/UserBooksPage';
 
 function App() {
 
@@ -51,7 +52,7 @@ function App() {
           <Route path='main-panel' element={<AdminMainPanelPage/>}/>
           <Route path='books' element={<AdminDashboardBookPage/>}/>
           <Route path='users' element={<UserPage/>}/>
-          <Route path='user-books' element={''}/>
+          <Route path='user-books' element={<UserBooksPage/>}/>
           <Route path='menus' element={''}/>
           <Route path='comments' element={''}/>
           <Route path='chats' element={''}/>

@@ -68,7 +68,7 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>آخرین کتاب ها</p>
-                    <a href='/admin-dashboard/users' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                    <a href='/admin-dashboard/books' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
                         مشاهده همه
                         <svg className="size-4">
                             <use href="#chevron-left"></use>
@@ -110,7 +110,7 @@ export default function AdminMainPanelPage() {
                 {/* title */}
                 <div className='table__title'>
                     <p className='font-DanaBold'>جدید ترین کتاب های کاربران</p>
-                    <a href='/admin-dashboard/users' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
+                    <a href='/admin-dashboard/user-books' className='text-sm text-sky-500 flex items-center justify-center gap-2 hover:text-sky-600'>
                         مشاهده همه
                         <svg className="size-4">
                             <use href="#chevron-left"></use>
