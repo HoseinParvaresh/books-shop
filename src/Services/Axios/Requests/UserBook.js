@@ -34,7 +34,7 @@ const validatorUserBook = (userBook) => {
     } 
     return true  
 }
-const addUserBook = (data) => {
+const addUserBookToDatabase = (data) => {
     apiRequests.post('/userBooks',data).then(res => {
             Alert('success','کتاب شما ثبت و بعد از بررسی منتشر خواهد شد.')
             setTimeout(()=>{
@@ -70,7 +70,7 @@ const uploadImage = async (image1,image2,image3,image4,image5,data) => {
         }
     })
 
-    addUserBook(data)
+    addUserBookToDatabase(data)
     
 }
 const upload = async (file) => {
@@ -104,5 +104,18 @@ const upload = async (file) => {
     }
 }
 
+const changeReviewStatusUserBook = (bookId,command) => {
+    try {
+        apiRequests.patch(`/userBooks/${bookId}`,{ review_status: command }).then(res=> {
+            console.log(res); 
+            window.location.reload() 
+        })
+    } catch (error) {
+        console.log(error);             
+    } 
+}
 
-export {validatorUserBook,uploadImage}
+
+
+
+export {validatorUserBook,uploadImage,changeReviewStatusUserBook}
