@@ -17,7 +17,7 @@ export default function StorePage(Props) {
 					<span className="hidden sm:inline-block w-4 h-4 bg-amber-400 rounded-sm"></span>
 					<h2 className="text-center font-MorabbaBold text-2xl lg:text-3xl"> {Props.title} </h2>
 				</div>
-				<span className="sm:text-xl font-Dana text-slate-500"><span id="count_item_archive">{Props.books ? Props.books.length : Props.booksSwap.length}</span> جلد کتاب </span>
+				<span className="sm:text-xl font-Dana text-slate-500"><span id="count_item_archive">{Props.books ? Props.books.length : Props.userBooks.length}</span> جلد کتاب </span>
 			</div>
       		{/* Sidebar & Content */}
 			<section className="grid grid-cols-12 gap-y-5 md:gap-x-7">
@@ -63,6 +63,7 @@ export default function StorePage(Props) {
 						
 						{
 							Props.books ? (
+								
 								Props.books.map(product => (
 									<Product key={product.id} {...product}/>
 								))
