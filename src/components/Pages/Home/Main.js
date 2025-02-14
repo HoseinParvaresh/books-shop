@@ -108,7 +108,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                     </SwiperSlide>
                 </Swiper>
       </section>
-      {/* Amazing offer & The latest books & background images */}
+      {/* Amazing offer & quoteCard(Book Quote) & The latest books &  background images & Best selling books & quoteCard(author Quote) & users books & publishers */}
       <div className="px-10">
           {/* <!-- Amazing offer --> */}
           <section className="bg-orange-300 dark:bg-orange-400 sm:flex shadow-normal py-3 md:pb-4 lg:py-5 px-3 md:px-4 lg:px-5 rounded-xl xs:rounded-2xl md:rounded-3xl">
@@ -416,9 +416,9 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                 }
               >
               {
-                userBooks.slice(0).map(userBook => (
-                  <SwiperSlide key={userBook.id}>
-                      <UserBookProduct {...userBook}></UserBookProduct>
+                userBooks.filter(book => book.review_status == 'approved').map(book => (
+                  <SwiperSlide key={book.id}>
+                      <UserBookProduct {...book}></UserBookProduct>
                   </SwiperSlide>
                 ))
               }

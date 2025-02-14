@@ -1,14 +1,15 @@
 import React from 'react'
-import ToggleBox from '../SecondHandBooks/ToggleBox'
-import Sorting from '../SecondHandBooks/Sorting'
-import Product from '../../Home/Product'
-import SideBar from './SideBar'
-import UserBook from '../UserBooks/UserBookProduct'
+import ToggleBox from './SecondHandBooks/ToggleBox'
+import Sorting from './SecondHandBooks/Sorting'
+import Product from '../Home/Product'
+import SideBar from './Common/SideBar'
+import UserBookProduct from './UserBooks/UserBookProduct'
 
-export default function Main(Props) {	
+export default function StorePage(Props) {	
 	
   return (
     <main id="posts-archive" className="max-w-[1920px] mx-auto overflow-x-hidden mt-8 sm:mt-10">
+		{/* main */}
 		<div className="container">
 			{/* <!-- Section Name --> */}
 			<div className="flex flex-col sm:flex-row gap-y-2 items-center justify-between mb-8 lg:mb-15">
@@ -66,8 +67,8 @@ export default function Main(Props) {
 									<Product key={product.id} {...product}/>
 								))
 							) : (
-								Props.booksSwap.map(product => (
-									<UserBook key={product.id} {...product}/>
+								Props.userBooks.map(product => (
+									<UserBookProduct key={product.id} {...product}/>
 								))
 							)
 						}

@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import Header from './../../../Common/Header/Header'
-import Main from './../Common/Main'
+import StorePage from '../StorePage'
 import Footer from './../../../Common/Footer/Footer'
 import apiRequests from '../../../../Services/Axios/Configs/Configs'
 import Alert from '../../../Utils/Alert'
@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast'
 
 export default function ShopPage() {
 
-  const [Products,setProducts] = useState([])
+  const [books,setBooks] = useState([])
 
   const [sortList] = useState([
     {id:1,title:'همه کتاب ها',href:'#',dataId:'default',active:true},
@@ -37,7 +37,7 @@ export default function ShopPage() {
     
     try {
       const response = await apiRequests.get("/books");
-      setProducts(response.data);
+      setBooks(response.data);
       
     } catch (error) {
       Alert('error',"Error fetching data from ShopPage.js in Shop Page")
@@ -51,7 +51,7 @@ export default function ShopPage() {
     <div className='text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900 font-Dana'>
       <div><Toaster position="top-right"/></div>
       <Header/>
-      {Products.length !== 0 ? <Main books={Products} sortList={sortList} toggleBox={toggleList} categoryList={categoryList} title={"کتاب ها"}/> : ""}
+      {books.length && <StorePage books={books} sortList={sortList} toggleBox={toggleList} categoryList={categoryList} title={"کتاب ها"}/>}
       <Footer/>
     </div>
   )
