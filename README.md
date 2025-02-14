@@ -96,7 +96,4 @@ $ npm start
 
 ###
 <a href="#top">Back to top</a>
-
-<p align="left">Readme created with <a href="https://github.com/maurodesouza/profile-readme-generator/tree/main">profile-readme-generator</a></p>
-
 ###
