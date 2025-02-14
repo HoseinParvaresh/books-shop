@@ -133,7 +133,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
               <Swiper
                 slidesPerView={1}
                 spaceBetween={5}
-                modules={[Autoplay]}
                 breakpoints={
                   {
                     467: {
@@ -152,12 +151,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       slidesPerView: 5,
                       spaceBetween: 10,
                     }
-                  }
-                }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
                   }
                 }
               >
@@ -223,7 +216,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                 className='!p-1'
                 slidesPerView={1}
                 spaceBetween={5}
-                modules={[Autoplay]}
                 breakpoints={
                   {
                     467: {
@@ -242,12 +234,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       slidesPerView: 5,
                       spaceBetween: 15,
                     }
-                  }
-                }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
                   }
                 }
               >
@@ -298,7 +284,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
               className='!p-1'
               slidesPerView={1}
               spaceBetween={5}
-              modules={[Autoplay]}
               breakpoints={
                 {
                   467: {
@@ -317,12 +302,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                     slidesPerView: 5,
                     spaceBetween: 15,
                   }
-                }
-              }
-              autoplay={
-                {
-                  delay: 4000,
-                  disableOnInteraction: false,
                 }
               }
             >
@@ -387,7 +366,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                 className='!p-1'
                 slidesPerView={1}
                 spaceBetween={5}
-                modules={[Autoplay]}
                 breakpoints={
                   {
                     470: {
@@ -408,15 +386,9 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                     }
                   }
                 }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                  }
-                }
               >
               {
-                userBooks.filter(book => book.review_status == 'approved').map(book => (
+                userBooks.map(book => (
                   <SwiperSlide key={book.id}>
                       <UserBookProduct {...book}></UserBookProduct>
                   </SwiperSlide>

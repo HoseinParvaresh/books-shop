@@ -18,7 +18,7 @@ export default function Home() {
       const responseBook = await apiRequests.get("/books");
       const responsePublisher = await apiRequests.get("/publisher");
       const responseBookCard = await apiRequests.get("/quoteCard");
-      const responseUserBooks = await apiRequests.get("/userBooks");
+      const responseUserBooks = await apiRequests.get("/userBooks?review_status=approved");
       
       setBooks(responseBook.data);
       setPublishers(responsePublisher.data);
