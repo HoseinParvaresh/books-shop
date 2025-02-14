@@ -10,8 +10,6 @@ export default function AdminDashboardPage() {
   const [books,setBooks] = useState([])
   const [users,setUsers] = useState([])
   const [userBook,setUserBook] = useState([])
-  const [menus,setMenus] = useState([])
-  const [chats,setChats] = useState([])
   const [asideMenuItem,setAsideMenuItem] = useState()
 
 
@@ -21,15 +19,11 @@ export default function AdminDashboardPage() {
       const responseBooks = await apiRequests.get('/books');     
       const responseUser = await apiRequests.get('/users');     
       const responseUserBook = await apiRequests.get('/userBooks');     
-      const responseMenus = await apiRequests.get('/menus');   
-      const responseChats = await apiRequests.get('/chats');  
 
       setAsideMenuItem(responseOtherAsideItems.data)
       setBooks(responseBooks.data);
       setUsers(responseUser.data);
       setUserBook(responseUserBook.data);
-      setMenus(responseMenus.data);
-      setChats(responseChats.data)
 
     } catch (error) {
       Alert('error',"Error fetching data")
@@ -49,7 +43,7 @@ export default function AdminDashboardPage() {
             <section className="w-full">
               <DashboardHeader/>
               {
-                <Outlet context={[books,users,userBook,menus,chats]} />
+                <Outlet context={[books.reverse(),users.reverse(),userBook.reverse()]} />
               }
             </section> 
         </section>

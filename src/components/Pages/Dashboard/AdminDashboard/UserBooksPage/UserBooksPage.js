@@ -22,7 +22,7 @@ export default function UserBooksPage() {
         {/* user books table */}
         <div className="h-[465px] scroll-style mt-10">
             {/* table */}
-            <UserBooksTable userBook={userBook.reverse()}/>
+            <UserBooksTable userBook={userBook}/>
         </div>
     </main>
   )

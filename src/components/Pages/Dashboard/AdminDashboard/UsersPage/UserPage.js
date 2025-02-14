@@ -40,7 +40,7 @@ export default function BookPage() {
                     {/* body */}
                     <tbody className="table__body">
                         {
-                            users.reverse().map((user,index) => (
+                            users.map((user,index) => (
                                 <tr className="table__body--row" key={index}>
                                     <td className='text-white'>
                                         <button className='rounded-md px-2 py-1 bg-red-500 hover:bg-red-600 transition-colors'>بن</button>
