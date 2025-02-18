@@ -8,7 +8,7 @@ import UserBookProduct from './../Store/UserBooks/UserBookProduct'
 import { Link } from 'react-router-dom';
 import QuoteCard from './QuoteCard';
 
-export default function Main({books,publishers,quoteCard,userBooks}) {
+export default function Main({books,discountBooks,lastBooks,bestsellingBooks,publishers,quoteCard,userBooks}) {
   
   return (
     <main className="main my-5 w-full font-Dana">
@@ -24,7 +24,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
           pagination={{ clickable: true }}
           autoplay={
             {
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }
           }
@@ -70,12 +70,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                         slidesPerView: 7,
                         spaceBetween: 10,
                       }
-                    }
-                  }
-                  autoplay={
-                    {
-                      delay: 3000,
-                      disableOnInteraction: false,
                     }
                   }
                 >
@@ -154,9 +148,8 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                   }
                 }
               >
-
                 {
-                  books.slice(0,5).map(product => (
+                  discountBooks.map(product => (
                     <SwiperSlide key={product.id}>
                         <Product {...product}></Product>
                     </SwiperSlide>
@@ -185,12 +178,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       slidesPerView: 3,
                       spaceBetween: 10,
                     }
-                  }
-                }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
                   }
                 }
               >
@@ -238,7 +225,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                 }
               >
               {
-                books.slice(5,11).map(product => (
+                lastBooks.map(product => (
                   <SwiperSlide key={product.id}>
                       <Product {...product}></Product>
                   </SwiperSlide>
@@ -251,12 +238,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
-            autoplay={
-              {
-                delay: 3000,
-                disableOnInteraction: false,
-              }
-            }
             >
             <SwiperSlide>
               <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg4.jpg" alt="bg 4" loading='lazy'/></a>
@@ -270,6 +251,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
             <SwiperSlide>     
                 <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg7.jpg" alt="bg 7" loading='lazy'/></a>
             </SwiperSlide>
+
         </Swiper>
           </section>
           {/* <!-- Best selling books --> */}
@@ -306,7 +288,7 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
               }
             >
             {
-              books.slice(11,17).map(product => (
+              bestsellingBooks.map(product => (
                 <SwiperSlide key={product.id}>
                     <Product {...product}></Product>
                 </SwiperSlide>
@@ -335,12 +317,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       slidesPerView: 3,
                       spaceBetween: 10,
                     }
-                  }
-                }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
                   }
                 }
               >
@@ -426,12 +402,6 @@ export default function Main({books,publishers,quoteCard,userBooks}) {
                       slidesPerView: 12,
                       spaceBetween: 15,
                     }
-                  }
-                }
-                autoplay={
-                  {
-                    delay: 4000,
-                    disableOnInteraction: false,
                   }
                 }
               >
