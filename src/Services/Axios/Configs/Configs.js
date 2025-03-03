@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequests = axios.create({
-    baseURL: 'https://hopeful-nobel-ow1xn8uvt.liara.run/',
+    baseURL: 'https://bookshop-server.liara.run/',
     headers: {
         "Content-Type": "application/json",
         Auth: "Bearer Token",
