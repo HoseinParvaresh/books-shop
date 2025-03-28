@@ -104,9 +104,9 @@ export default function NotFound() {
 			<path d="M437.578 379.593H425.223V380.887H437.578V379.593Z" fill="#FBBF24"></path>
 		</svg>
 		<p class="font-DanaBold text-lg md:text-2.5xl my-5 md:my-10">متاسفانه صفحه مورد نظر شما پیدا نشد.</p>
-		<a href="https://books-shop.liara.run/" class="w-full sm:w-auto btn-primary btn">بازگشت به صفحه اصلی</a>
+		<a href="https://books-shop.liara.run/" class="w-full sm:w-auto button-primary button-lg">بازگشت به صفحه اصلی</a>
 		<div class="hidden lg:block absolute top-0 left-0 w-[300px] h-[300px] bg-sky-500 opacity-20 blur-[120px] rounded-full"></div>
 		<div class="hidden lg:block absolute bottom-0 right-0 w-[300px] h-[300px] bg-amber-400 opacity-20 blur-[120px] rounded-full"></div>
-	  </main>
+	</main>
   )
 }
