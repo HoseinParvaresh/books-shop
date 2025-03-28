@@ -24,6 +24,7 @@ import AdminMainPanelPage from './components/Pages/Dashboard/AdminDashboard/Main
 import AdminDashboardBookPage from './components/Pages/Dashboard/AdminDashboard/BooksPage/BookPage';
 import UserPage from './components/Pages/Dashboard/AdminDashboard/UsersPage/UserPage';
 import UserBooksPage from './components/Pages/Dashboard/AdminDashboard/UserBooksPage/UserBooksPage';
+import NotFound from './components/Pages/404/NotFound';
 
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
         <Route path='/register' element={isLogin ? <Navigate to={'/'}/> : <Register/>}/>
         <Route path='/login' element={isLogin ? <Navigate to={'/'}/> : <LoginPage/>}/>
         <Route path='/chat/:id' element={isLogin ? <ChatPage/> : <Navigate to={'/register'}/>}/>
+        <Route path='*' element={<NotFound/>}></Route>
+
         <Route path='/user-dashboard' element={isLogin ? <UserDashboardPage/> : <Navigate to={'/'}/>}>
           <Route path='main-panel' element={<UserMainPanelPage/>}/>
           <Route path='my-books' element={<MyBooksPage/>}/>
@@ -61,7 +64,7 @@ function App() {
           <Route path='discount-code' element={''}/>
           <Route path='tickets' element={''}/>
         </Route>
-        {/* <Route path='*' element={<NotFound/>}></Route> */}
+        
       </Routes>
     </>
   );
