@@ -80,10 +80,43 @@ $ npm start
 ```
 ###
 
+<h2 align="left">📁 Folder Structure </h2>
+
+```
+└── 📁Secondhand Books Site
+    └── 📁public
+        └── 📁fonts
+        └── 📁images
+        └── 📁styles
+        └── index.html
+    └── 📁src
+        └── 📁components
+            └── 📁Common
+                └── 📁Footer
+                └── 📁Header
+            └── 📁Pages
+                └── 📁404
+                └── 📁Authentication
+                └── 📁Chat
+                └── 📁Dashboard
+                └── 📁Home
+                └── 📁Product
+                └── 📁Store
+            └── 📁Utils
+        └── 📁Services
+            └── 📁Axios
+                └── 📁Configs
+                └── 📁Requests
+        └── App.js
+        └── index.css
+        └── index.js
+    └── tailwind.config.js
+```
+
 <h2 align="left">🎮 Scripts</h2>
 
 ###
-  - `start`: starts the application in production mode at `localhost:3000`;
+  - `start`: starts the application in production mode at `localhost:3000`
   - `build`: creates an optimized production build of the application;
   - `test`: runs the tests;
   - `tailwind`: build css files;
