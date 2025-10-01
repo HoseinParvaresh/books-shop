@@ -8,7 +8,7 @@ export default function ProductSwap(Props) {
 
     
   return (
-    <div className="product shadow-normal dark:shadow-normal-dark flex flex-col dark:text-primary-light bg-primary-light dark:bg-[#242A38] border border-neutral-100 dark:border-none rounded-2xl">
+    <div className="product shadow-normal dark:shadow-normal-dark flex flex-col dark:text-primary-light bg-primary-light dark:bg-primary-dark border border-neutral-100 dark:border-none rounded-2xl">
         {/* <!-- product Banner --> */}
         <div className="relative h-[282px] group">
             <Link className="block w-full h-full" to={`/user-book/${Props.id}`} title={Props.title}>

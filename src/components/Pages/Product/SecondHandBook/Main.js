@@ -206,7 +206,7 @@ export default function Main(Props) {
 					{/* Rating */}
 					<div className="bg-primary-light dark:bg-primary-dark rounded-2xl p-4.5 sm:p-5">
 						<div className="flex gap-x-4">
-							<div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-primary-darker rounded-xl">
+							<div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-secondary-dark rounded-xl">
 								<svg className="w-10 h-10 md:w-11 md:h-11 text-primary">
 									<use href="#user-group-mini"></use>
 								</svg>
@@ -215,7 +215,7 @@ export default function Main(Props) {
 									<span className="block text-sm opacity-70">خریدار</span>
 								</div>
 							</div>
-							<div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-primary-darker rounded-xl">
+							<div className="flex flex-col sm:flex-row items-center text-center md:text-right gap-y-1 gap-x-3 flex-grow pt-3.5 pb-3 sm:px-3.5 sm:py-2.5 bg-gray-100 dark:bg-secondary-dark rounded-xl">
 								<svg className="w-10 h-10 md:w-11 md:h-11 text-amber-500">
 									<use href="#star-mini"></use>
 								</svg>

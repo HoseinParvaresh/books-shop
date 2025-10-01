@@ -194,15 +194,13 @@
 
     /* ------ { ... Breadcrumb ... } ------ */
     .breadcrumb {
-        @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-neutral-100 
-        rounded-xl bg-primary-light dark:bg-primary-dark dark:border-primary-dark dark:text-primary-light 
-        xs:flex
+        @apply hidden h-13 items-center overflow-x-auto overflow-y-hidden border border-neutral-100 dark:border-secondary-dark rounded-xl bg-white dark:bg-primary-dark xs:flex
     }
     .breadcrumb__item {
         @apply relative flex h-full shrink-0 items-center pl-2 pr-[38px]
     }
     .breadcrumb__item::before,.breadcrumb__item::after {
-        @apply absolute left-0 h-10 w-[5px] bg-gray-100 content-[""] dark:bg-secondary-dark;
+        @apply absolute left-0 h-10 w-[5px] bg-gray-100 dark:bg-secondary-dark content-[""];
     }
     .breadcrumb__item::before {
         @apply bottom-[-6px] rotate-[-35deg] origin-bottom

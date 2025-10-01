@@ -40,13 +40,13 @@ module.exports = {
       colors: {
         "primary" : {
           "light" : '#FFFFFF',
-          "dark" : '#1F2937',
+          "dark" : '#303030',
           'darker': '#374151',
           DEFAULT: '#22c55e'
         },
         "secondary" : {
           "light" : '#F8F8F8',
-          "dark" : '#111827'
+          "dark" : '#191919'
         }
 
       },
