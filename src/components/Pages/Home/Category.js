@@ -1,8 +1,11 @@
 import React from 'react'
 export default function Category(props) {
   return (
-      <div className="flex-center flex-col gap-6">
-          <img src={props.img} alt="img" className="object-cover rounded-lg xs:rounded-xl md:rounded-2xl border-3 border-black/10 dark:border-white/10 hover:border-black/50 hover:dark:border-white/50 p-1 transition-colors"/>
+    <div className='text-center'>
+      <div className="flex-center">
+        <img src={props.img} alt="img" className='size-15 border-2 shadow border-dashed rounded-full border-primary hover:border-sky-400 transition-colors p-3' />
       </div>
+      <p className='text-xs mt-2 font-DanaBold'>{props.title}</p>
+    </div>
   )
 }

@@ -475,6 +475,9 @@
     .scroll-style::-webkit-scrollbar {
         width: 5px;
     }
+    .swiper-custom-bullet-active {
+        @apply !w-5 !rounded-md !bg-primary !opacity-100
+    }
     ::-webkit-scrollbar {
         width: 9px;
     }
@@ -494,4 +497,5 @@
         border-radius: 3px;
         @apply dark:bg-[#394e5f];
     }
+
 }
