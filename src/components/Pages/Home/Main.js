@@ -133,33 +133,13 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
       {/* Amazing offer & quoteCard(Book Quote) & The latest books &  background images & Best selling books & quoteCard(author Quote) & users books & publishers */}
       <div className="px-10">
         {/* <!-- Amazing offer --> */}
-        <div className='w-full bg-primary flex items-center gap-2 p-2 text-white rounded-xl mb-4'>
-          <svg className="hidden sm:block size-7">
-            <use href="#percent-badge"></use>
-          </svg>
-          <p className='font-Morabba'>پیشنهادات شگفت انگیز</p>
-        </div>
-
-
-        <section className="bg-orange-300 dark:bg-orange-400 sm:flex shadow-normal py-3 md:pb-4 lg:py-5 px-3 md:px-4 lg:px-5 rounded-xl xs:rounded-2xl md:rounded-3xl">
-          {/* <!-- logo --> */}
-          <div className="w-full sm:w-32 mb-4 mt-3 sm:ml-5 flex items-center justify-between sm:justify-center sm:gap-5 sm:flex-col sm:shrink-0 text-primary-light">
-            {/* amazing offer image */}
-            <img src="./images/svg/Amazings.svg" alt="amazing offer" className="hidden sm:block w-full" loading='lazy' />
-            <img src="./images/svg/incredible-word.svg" alt="amazing offer" className='block sm:hidden' loading='lazy' />
-            {/* amazing offer svg */}
-            <svg className="hidden sm:block size-20">
+        <section>
+          <div className='w-full bg-primary flex items-center gap-2 p-2 text-white rounded-xl mb-4'>
+            <svg className="hidden sm:block size-7">
               <use href="#percent-badge"></use>
             </svg>
-            {/* show more */}
-            <Link to={'/book-store'} className="flex items-center gap-1">
-              <span className="font-DanaBold text-sm md:text-base ">مشاهده همه</span>
-              <svg className="size-3 xs:size-5">
-                <use href="#chevron-left-mini"></use>
-              </svg>
-            </Link>
+            <p className='font-Morabba'>پیشنهادات شگفت انگیز</p>
           </div>
-          {/* <!-- product offer swiper --> */}
           <Swiper
             slidesPerView={1}
             spaceBetween={5}
@@ -193,6 +173,7 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
             }
           </Swiper>
         </section>
+
         {/* quoteCard => Book Quote */}
         <section className="py-2.5 md:px-4 lg:px-5 mb-5">
           <div className="title">
