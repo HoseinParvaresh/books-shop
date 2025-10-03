@@ -143,6 +143,7 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           <Swiper
             slidesPerView={1}
             spaceBetween={5}
+            className='!p-1'
             breakpoints={
               {
                 467: {
@@ -173,14 +174,8 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
             }
           </Swiper>
         </section>
-
         {/* quoteCard => Book Quote */}
-        <section className="py-2.5 md:px-4 lg:px-5 mb-5">
-          <div className="title">
-            <b></b>
-            <p> قطعه ای از کتاب </p>
-            <b></b>
-          </div>
+        <section className="py-2.5 md:px-4 lg:px-5 my-5">
           <Swiper
             slidesPerView={1}
             spaceBetween={5}
@@ -209,12 +204,23 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           </Swiper>
         </section>
         {/* <!-- The latest books --> */}
-        <section className="bg-primary-light dark:bg-primary-dark dark:text-primary-light w-full shadow-normal rounded-xl xs:rounded-2xl md:rounded-3xl py-2.5 px-3 md:px-4 lg:px-5">
-          {/* <!-- title --> */}
-          <div className="title">
-            <b></b>
-            <p> آخرین کتاب ها </p>
-            <b></b>
+        <section>
+          <div className='w-full flex justify-between items-center gap-5 p-2 text-black mb-2'>
+            <div className='flex items-center gap-2 min-w-max'>
+              <svg className="hidden sm:block size-7 text-primary">
+                <use href="#book-open"></use>
+              </svg>
+              <p className='font-Morabba dark:text-white'>جدیدترین کتاب ها</p>
+            </div>
+            <span className='border border-dashed border-black/20 dark:border-white/20 w-full'></span>
+            <Link to="/" className='min-w-max flex-center gap-1 cursor-pointer'>
+              <p className='text-xs dark:text-white'>مشاهده همه</p>
+              <div className="p-0.5 rounded-full bg-primary">
+                <svg className="size-3.5 text-white">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </div>
+            </Link>
           </div>
           <Swiper
             className='!p-1'
@@ -251,33 +257,65 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           </Swiper>
         </section>
         {/* <!-- background images --> */}
-        <section className="my-4 rounded-xl xs:rounded-2xl md:rounded-3xl overflow-hidden">
+        <section className="my-6">
           <Swiper
             modules={[Autoplay]}
-            slidesPerView={1}
+            slidesPerView={3}
+            spaceBetween={20}
           >
             <SwiperSlide>
-              <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg4.jpg" alt="bg 4" loading='lazy' /></a>
+              <div className='flex gap-3 items-center bg-yellow-100/70 p-5 rounded-full'>
+                <svg className='size-8 text-orange-300'>
+                  <use href='#map-pin'></use>
+                </svg>
+                <div className='flex flex-col gap-2 font-DanaBold'>
+                  <p className='text-sm text-black/70'>ارسال رایگان</p>
+                  <p className='text-black/40 text-[13px]'>ارسال رایگان برای سفارش های بالای 300 هزار تومان</p>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg5.jpg" alt="bg 5" loading='lazy' /></a>
+              <div className='flex gap-3 items-center bg-cyan-100/70 p-5 rounded-full'>
+                <svg className='size-8 text-cyan-300'>
+                  <use href='#sparkles'></use>
+                </svg>
+                <div className='flex flex-col gap-2 font-DanaBold'>
+                  <p className='text-sm text-black/70'>تحویل سریع</p>
+                  <p className='text-black/40 text-[13px]'>ارسال رایگان برای سفارش های بالای 300 هزار تومان</p>
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg6.jpg" alt="bg 6" loading='lazy' /></a>
+              <div className='flex gap-3 items-center bg-yellow-100/70 p-5 rounded-full'>
+                <svg className='size-8 text-orange-300'>
+                  <use href='#gift'></use>
+                </svg>
+                <div className='flex flex-col gap-2 font-DanaBold'>
+                  <p className='text-sm text-black/70'>بسته‌بندی هدیه با کارت تبریک</p>
+                  <p className='text-black/40 text-[13px]'>بسته بندی به صورت کادو به همراه متن دلخواه</p>
+                </div>
+              </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <a href="/shop"><img className='hidden sm:block w-full' src="./images/bg7.jpg" alt="bg 7" loading='lazy' /></a>
-            </SwiperSlide>
-
           </Swiper>
         </section>
         {/* <!-- Best selling books --> */}
-        <section className="bg-primary-light dark:bg-primary-dark dark:text-primary-light w-full shadow-normal rounded-xl xs:rounded-2xl md:rounded-3xl py-2.5 px-3 md:px-4 lg:px-5">
-          {/* <!-- title --> */}
-          <div className="title">
-            <b></b>
-            <p> پرفروش ترین کتاب ها </p>
-            <b></b>
+        <section>
+          <div className='w-full flex justify-between items-center gap-5 p-2 text-black mb-2'>
+            <div className='flex items-center gap-2 min-w-max'>
+              <svg className="hidden sm:block size-7 text-primary">
+                <use href="#book-open"></use>
+              </svg>
+              <p className='font-Morabba dark:text-white'>پرفروش ترین کتاب ها</p>
+            </div>
+            <span className='border border-dashed border-black/20 dark:border-white/20 w-full'></span>
+            <Link to="/" className='min-w-max flex-center gap-1 cursor-pointer'>
+              <p className='text-xs dark:text-white'>مشاهده همه</p>
+              <div className="p-0.5 rounded-full bg-primary">
+                <svg className="size-3.5 text-white">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </div>
+            </Link>
           </div>
           <Swiper
             className='!p-1'
@@ -314,12 +352,7 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           </Swiper>
         </section>
         {/* <!-- quoteCard => author Quote --> */}
-        <section className="py-2.5 px-3 md:px-4 lg:px-5 mb-5">
-          <div className="title">
-            <b></b>
-            <p> دوستت دارم به زبان نویسنده ها </p>
-            <b></b>
-          </div>
+        <section className="py-2.5 px-3 md:px-4 lg:px-5 my-5">
           <Swiper
             slidesPerView={1}
             spaceBetween={5}
@@ -348,12 +381,23 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           </Swiper>
         </section>
         {/* users books */}
-        <section className="bg-primary-light dark:bg-primary-dark dark:text-primary-light w-full shadow-normal rounded-xl xs:rounded-2xl md:rounded-3xl mb-5 py-2.5 px-3 md:px-4 lg:px-5">
-          {/* <!-- title --> */}
-          <div className="title">
-            <b></b>
-            <p> آخرین کتاب های کاربران</p>
-            <b></b>
+        <section>
+          <div className='w-full flex justify-between items-center gap-5 p-2 text-black mb-2'>
+            <div className='flex items-center gap-2 min-w-max'>
+              <svg className="hidden sm:block size-7 text-primary">
+                <use href="#book-open"></use>
+              </svg>
+              <p className='font-Morabba dark:text-white'>جدیدترین کتاب های کاربران</p>
+            </div>
+            <span className='border border-dashed border-black/20 dark:border-white/20 w-full'></span>
+            <Link to="/" className='min-w-max flex-center gap-1 cursor-pointer'>
+              <p className='text-xs dark:text-white'>مشاهده همه</p>
+              <div className="p-0.5 rounded-full bg-primary">
+                <svg className="size-3.5 text-white">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </div>
+            </Link>
           </div>
           <Swiper
             className='!p-1'
@@ -390,12 +434,7 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
           </Swiper>
         </section>
         {/* <!-- publishers --> */}
-        <section className="bg-primary-light dark:bg-primary-dark dark:text-primary-light w-full shadow-normal rounded-xl xs:rounded-2xl md:rounded-3xl py-2.5 px-3 md:px-4 lg:px-5">
-          <div className="title">
-            <b></b>
-            <p> ناشر ها </p>
-            <b></b>
-          </div>
+        <section className="py-2.5 px-3 md:px-4 lg:px-5 mt-10">
           <div className="flex-center">
             <Swiper
               slidesPerView={2}
@@ -425,7 +464,12 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
               {
                 publishers.map(pub => (
                   <SwiperSlide key={pub.id}>
-                    <img src={pub.image} alt={pub.name} loading='lazy' className='rounded-xl p-2 cursor-pointer' />
+                    <div className='text-center'>
+                      <div className="flex-center">
+                        <img src={pub.image} alt={pub.name} loading='lazy' className='size-20 border-3 shadow border-dashed rounded-full border-primary hover:border-sky-400 transition-colors p-1' />
+                      </div>
+                      <p className='text-xs mt-2 font-DanaBold dark:text-white'>{pub.name}</p>
+                    </div>
                   </SwiperSlide>
                 ))
               }
