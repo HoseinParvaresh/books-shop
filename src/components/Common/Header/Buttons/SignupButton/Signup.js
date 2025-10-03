@@ -77,7 +77,7 @@ export default function SignUp() {
                 </div>
             </>
     ) : (
-            <Link to={'/register'} className="button-xl h-11 button-secondary">
+            <Link to={'/register'} className="button-xl h-11 button-primary">
                 <svg className="w-6 h-6 hidden xs:block">
                     <use href="#user"></use>
                 </svg>

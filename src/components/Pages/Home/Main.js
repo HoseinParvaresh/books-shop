@@ -390,7 +390,7 @@ export default function Main({ books, discountBooks, lastBooks, bestsellingBooks
               <p className='font-Morabba dark:text-white'>جدیدترین کتاب های کاربران</p>
             </div>
             <span className='border border-dashed border-black/20 dark:border-white/20 w-full'></span>
-            <Link to="/" className='min-w-max flex-center gap-1 cursor-pointer'>
+            <Link to="/users-book-store" className='min-w-max flex-center gap-1 cursor-pointer'>
               <p className='text-xs dark:text-white'>مشاهده همه</p>
               <div className="p-0.5 rounded-full bg-primary">
                 <svg className="size-3.5 text-white">

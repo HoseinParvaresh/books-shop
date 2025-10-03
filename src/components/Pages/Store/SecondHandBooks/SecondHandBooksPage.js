@@ -48,7 +48,7 @@ export default function ShopPage() {
   }, []);
 
   return (
-    <div className='text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-900 font-Dana'>
+    <div className='text-gray-900 dark:text-white bg-gray-100 dark:bg-secondary-dark font-Dana'>
       <div><Toaster position="top-right"/></div>
       <Header/>
       {books.length && <StorePage books={books.reverse()} sortList={sortList} toggleBox={toggleList} categoryList={categoryList} title={"کتاب ها"}/>}
