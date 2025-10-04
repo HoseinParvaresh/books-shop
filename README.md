@@ -1,27 +1,15 @@
 <h1 align="center">Secondhand Books Site</h1>
 
+
+<p align="left">This website is an online platform for buying, selling, and exchanging second-hand books.📖<br><br> Aimed at reducing educational costs 💰 and increasing access to book materials, this platform provides an environment where users can easily acquire the books they need or offer their own books to others. <br><br> In addition to buying and selling, book exchange is also possible 🔄, allowing users to obtain new resources without additional costs.<br><br> Furthermore, an internal messaging system 💬 is embedded in the site, enabling users to communicate about book details and exchange arrangements.<br><br>
+<a href="https://book-one-omega.vercel.app/">Link to view the website</a></p>
+
+
 ###
+
 
 <br clear="both">
 
-<h2 align="left">🎯 About</h2>
-
-
-###
-
-<p align="left">This website is an online platform for buying, selling, and exchanging second-hand books.📖<br><br> Aimed at reducing educational costs 💰 and increasing access to book materials, this platform provides an environment where users can easily acquire the books they need or offer their own books to others. <br><br> In addition to buying and selling, book exchange is also possible 🔄, allowing users to obtain new resources without additional costs.<br><br> Furthermore, an internal messaging system 💬 is embedded in the site, enabling users to communicate about book details and exchange arrangements.<br><br>
-<a href="https://books-shop.liara.run/">Link to view the website</a></p>
-
-
-###
-
-<div align="center">
-
-
-https://github.com/user-attachments/assets/5635a0ef-0fdf-4a28-b98e-afc0aeda5e1e
-
-
-</div>
 
 ###
 
